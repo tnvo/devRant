@@ -4,21 +4,21 @@ const BrowserWindow = electron.BrowserWindow;
 
 let mainWindow
 
+const name = 'devRant // new Rant("fml");';
+
 function createWindow () {
   mainWindow = new BrowserWindow({
-        title: 'devRant.io',
+        title: name,
         movable: true,
         width: 470,
-        height: 840,
-        minWidth: 320,
+        height: 912,
+        minWidth: 470,
         minHeight: 500,
         maxWidth: 640,
-        titleBarStyle: 'hidden-inset',
         fullscreenable: false,
         resizable: true,
-        skipTaskbar: true,
         autoHideMenuBar: true,
-        icon: __dirname + '../icon/favicon.icns'
+        icon: __dirname + '/favicon.png'
  })
 
   mainWindow.loadURL('file://' + __dirname + '/index.html')
