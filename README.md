@@ -1,6 +1,4 @@
-![alt text](https://www.devrant.io/static/devrant/img/landing/simple-guy2.png)
-
-![alt text](https://image.winudf.com/1051/01c38350adb60020/icon=150x.png) # Devrant.io
+# <img width='45' height="45" align='left' alt='devrant.io logo' src="https://image.winudf.com/1051/01c38350adb60020/icon=150x.png"> Devrant.io
 This is the unofficial [Devrant.io](https://www.devrant.io/) web app. Built using the [Electron](http://electron.atom.io/) framework to take the current live feed site and give it to you as a desktop app.
 
 ---------------------------------------------------------
