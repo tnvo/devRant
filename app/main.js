@@ -5,7 +5,21 @@ const BrowserWindow = electron.BrowserWindow;
 let mainWindow
 
 function createWindow () {
-  mainWindow = new BrowserWindow({width: 470, height: 840, center: true, titleBarStyle: 'hidden-inset', fullscreenable: true, resizable: true, skipTaskbar: true, autoHideMenuBar: true, icon: __dirname + '../icon/favicon.icns'})
+  mainWindow = new BrowserWindow({
+        title: 'devRant.io',
+        movable: true,
+        width: 470,
+        height: 840,
+        minWidth: 320,
+        minHeight: 500,
+        maxWidth: 640,
+        titleBarStyle: 'hidden-inset',
+        fullscreenable: false,
+        resizable: true,
+        skipTaskbar: true,
+        autoHideMenuBar: true,
+        icon: __dirname + '../icon/favicon.icns'
+ })
 
   mainWindow.loadURL('file://' + __dirname + '/index.html')
   mainWindow.on('closed', function () {

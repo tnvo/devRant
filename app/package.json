@@ -6,7 +6,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron main.js",
-    "build-win": "electron-packager . --overwrite --prune --out=build --ignore='node_modules' --ignore='package-win.bat' --platform=win32 --arch=x64 --icon=../icon/favicon.icns"
+    "build-osx": "electron-packager . --overwrite --prune --out=../build --ignore='node_modules' --ignore='package-win.bat' --platform=darwin --arch=x64 --icon=../icon/favicon.icns"
   },
   "repository": {
     "url": "https://github.com/meadowcottage/devrant.io.git"

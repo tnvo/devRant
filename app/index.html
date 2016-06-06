@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>appear.in</title>
+    <title>devrant.io</title>
     <style>
       body {
         margin: 0;
@@ -16,16 +16,6 @@
 </style>
   </head>
   <body>
-    <webview id='webview' src='https://www.devrant.io/feed' preload='webview-script.js'></webview>
-    <script>
-      'use strict';
-      const webview = document.getElementById('webview');
-      webview.addEventListener('dom-ready', function() {
-        this.insertCSS('header.top-line{padding-left:76px;}div.content-wrapper{width:calc(100% - 65px);float:right;}');
-      });
-      webview.addEventListener('new-window', function(event) {
-        require('electron').shell.openExternal(event.url);
-      });
-</script>
+    <webview id='webview' src='https://www.devrant.io/feed'></webview>
   </body>
 </html>
