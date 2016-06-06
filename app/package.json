@@ -1,0 +1,28 @@
+{
+  "name": "devrant.io",
+  "productName": "devrant.io",
+  "version": "1.0.1",
+  "description": "The unofficial electron app for devrant.io",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "build-win": "electron-packager . --overwrite --prune --out=build --ignore='node_modules' --ignore='package-win.bat' --platform=win32 --arch=x64 --icon=../icon/favicon.icns"
+  },
+  "repository": {
+    "url": "https://github.com/meadowcottage/devrant.io.git"
+  },
+  "keywords": [
+    "electron",
+    "devrant.io"
+  ],
+  "author": "[MEADOW_DEV]",
+  "license": "GNU General Public License",
+  "bugs": {
+    "url": "https://github.com/meadowcottage/devrant.io/issues/"
+  },
+  "homepage": "https://github.com/meadowcottage/devrant.io/",
+  "devDependencies": {
+    "electron-packager": "^7.0.1",
+    "electron-prebuilt": "^1.0.1"
+  }
+}
