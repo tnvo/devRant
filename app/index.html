@@ -2,20 +2,43 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>devrant.io</title>
+    <title>devRant // new Rant("fml");</title>
     <style>
       body {
         margin: 0;
         height: 100vh;
-        margin-top: 24px;
-        background-color: #54556E;
       }
       #webview {
         height: 100vh;
       }
-</style>
+    </style>
   </head>
   <body>
     <webview id='webview' src='https://www.devrant.io/feed'></webview>
+    <script>
+      //JQuery Import
+      window.$ = window.jQuery = require('./jquery-2.2.2.js');
+
+      const webview = document.getElementById('webview');
+
+      // DOM ready executing scripts after the webview has loaded
+      webview.addEventListener('dom-ready', function() {
+
+        // Debugging - Open Dev Tools
+        webview.openDevTools()
+
+        // Remove Mobile Install Banner
+        webview.insertCSS('.mobile-install-banner{display:none;!important} .bar-btm-guy{display:none;!important}');
+
+        var mobile_install_banner = '$("mobile-install-banner").remove();';
+        webview.executeJavaScript(mobile_install_banner);
+
+      });
+
+      // Webview links that try to open in new window will open in default browser
+      webview.addEventListener('new-window', function(event) {
+        require('electron').shell.openExternal(event.url);
+      });
+    </script>
   </body>
 </html>
