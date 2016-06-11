@@ -37,6 +37,11 @@
         webview.executeJavaScript("$('.menu-modal.modal-base > ul').append('<li><a>Download for iOS</a></li>')");
         webview.executeJavaScript("$('.menu-modal.modal-base > ul').append('<li><a>Download for Android</a></li>')");
       });
+
+      // Webview links that try to open in new window will open in default browser
+      webview.addEventListener('new-window', function(event) {
+        require('electron').shell.openExternal(event.url);
+      });
     </script>
   </body>
 </html>
