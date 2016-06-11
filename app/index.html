@@ -19,25 +19,19 @@
       //JQuery Import
       window.$ = window.jQuery = require('./jquery-2.2.2.js');
 
+      //Constant variable made from 'webview' ID
       const webview = document.getElementById('webview');
 
       // DOM ready executing scripts after the webview has loaded
       webview.addEventListener('dom-ready', function() {
 
         // Debugging - Open Dev Tools
-        webview.openDevTools()
+        webview.openDevTools();
 
-        // Remove Mobile Install Banner
-        webview.insertCSS('.mobile-install-banner{display:none;!important} .bar-btm-guy{display:none;!important}');
-
-        var mobile_install_banner = '$("mobile-install-banner").remove();';
-        webview.executeJavaScript(mobile_install_banner);
-
-      });
-
-      // Webview links that try to open in new window will open in default browser
-      webview.addEventListener('new-window', function(event) {
-        require('electron').shell.openExternal(event.url);
+        // Remove Mobile Banner | Buttons Moved to Bottom of Window | Remove Scroll Bars
+        this.insertCSS('.mobile-install-banner{display:none!important;} .bar-btm-guy{display:none!important;}');
+        this.insertCSS('.addrant-btn, .addcomment-btn{bottom: 20px!important;}');
+        this.insertCSS('::-webkit-scrollbar{display: none!important;}');
       });
     </script>
   </body>
