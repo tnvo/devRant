@@ -32,6 +32,10 @@
         this.insertCSS('.mobile-install-banner{display:none!important;} .bar-btm-guy{display:none!important;}');
         this.insertCSS('.addrant-btn, .addcomment-btn{bottom: 20px!important;}');
         this.insertCSS('::-webkit-scrollbar{display: none!important;}');
+
+        //Adds Mobile Download Buttons to Menu | Adds Back Button
+        webview.executeJavaScript("$('.menu-modal.modal-base > ul').append('<li><a>Download for iOS</a></li>')");
+        webview.executeJavaScript("$('.menu-modal.modal-base > ul').append('<li><a>Download for Android</a></li>')");
       });
     </script>
   </body>
