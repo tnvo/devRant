@@ -7,7 +7,8 @@
   "scripts": {
     "start": "electron main.js",
     "build-win": "electron-packager . --overwrite --prune --out=../build --ignore='node_modules' --platform=win32 --arch=x64 --icon=../icon/favicon.ico",
-    "build-osx": "electron-packager . --overwrite --prune --out=../build --ignore='node_modules' --platform=darwin --arch=x64 --icon=../icon/favicon.icns"
+    "build-osx": "electron-packager . --overwrite --prune --out=../build --ignore='node_modules' --platform=darwin --arch=x64 --icon=../icon/favicon.icns",
+    "package-win": ""
   },
   "repository": {
     "url": "https://github.com/meadowcottage/devrant.io.git"
@@ -24,6 +25,7 @@
   "homepage": "https://github.com/meadowcottage/devrant.io/",
   "devDependencies": {
     "electron-packager": "^7.0.1",
-    "electron-prebuilt": "^1.2.2"
+    "electron-prebuilt": "^1.2.2",
+    "electron-winstaller": "^2.3.1"
   }
 }
