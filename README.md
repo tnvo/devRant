@@ -1,4 +1,4 @@
-# <img width='45' height="45" align='left' alt='devRant.io' src="https://raw.githubusercontent.com/Meadowcottage/Devrant.io/master/icon/favicon.png"> Devrant.io
+# <img width='45' height="45" align='left' alt='devRant.io' src="https://raw.githubusercontent.com/Meadowcottage/Devrant.io/master/icon/favicon.png"> Devrant.io (UNOFFICIAL)
 This is the unofficial [Devrant.io](https://www.devrant.io/) web app. Built using the [Electron](http://electron.atom.io/) framework to take the current live feed site and give it to you as a desktop app.
 
 ## Install

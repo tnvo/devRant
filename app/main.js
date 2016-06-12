@@ -10,9 +10,9 @@ function createWindow () {
   mainWindow = new BrowserWindow({
         title: name,
         movable: true,
-        width: 470,
+        width: 450,
         height: 912,
-        minWidth: 470,
+        minWidth: 450,
         minHeight: 500,
         maxWidth: 640,
         fullscreenable: false,
@@ -22,6 +22,7 @@ function createWindow () {
  })
 
   mainWindow.loadURL('file://' + __dirname + '/index.html')
+  mainWindow.setMenu(null)
   mainWindow.on('closed', function () {
     mainWindow = null
   })
