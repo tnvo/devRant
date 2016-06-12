@@ -24,26 +24,21 @@
 
       // DOM ready executing scripts after the webview has loaded
       webview.addEventListener('dom-ready', function() {
-
-        // Debugging - Open Dev Tools
-        webview.openDevTools();
-
         // Remove Mobile Banner | Buttons Moved to Bottom of Window | Remove Scroll Bars | Menu Button Icons
         this.insertCSS('.mobile-install-banner{display:none!important;} .bar-btm-guy{display:none!important;}');
         this.insertCSS('.addrant-btn, .addcomment-btn{bottom: 20px!important;}');
         this.insertCSS('::-webkit-scrollbar{display: none!important;}');
 
         //Adds Mobile Download Buttons to Menu | Adds Back Button
-        var add_Btn_iOS = "$('.menu-modal.modal-base > ul').append('<li><a target=\"_blank\" href=\"https://itunes.apple.com/us/app/apple-store/id1067512973?pt=117770459&ct=web_landing&mt=8\"><span class=\"icon-apple-logo1 icon\"></span>Download for iOS</a></li>');";
-        var add_Btn_Android = "$('.menu-modal.modal-base > ul').append('<li><a target=\"_blank\" href=\"https://play.google.com/store/apps/details?id=com.hexicallabs.devrant\"><span class=\"icon-andriod-logo1 icon\"></span>Download for Android</a></li>');";
-        var add_Btn_Back = "$('.feed-top-icons:nth-child(2), .rant-top-bar > .share-icons').prepend('<a id=\"onClickBack\" title=\"Back\" alt=\"Back\"><span class=\"icon-back2 icon\"></span></a>')";
+        var add_Btn_iOS = "$('<li><a target=\"_blank\" href=\"https://itunes.apple.com/us/app/apple-store/id1067512973?pt=117770459&ct=web_landing&mt=8\"><span class=\"icon-apple-logo1 icon\"></span>Download for iOS</a></li>').insertAfter('div.menu-modal > ul > li:nth-child(4)')";
+        var add_Btn_Android = "$('<li><a target=\"_blank\" href=\"https://play.google.com/store/apps/details?id=com.hexicallabs.devrant\"><span class=\"icon-andriod-logo1 icon\"></span>Download for Android</a></li>').insertAfter('div.menu-modal > ul > li:nth-child(4)')";
+        var add_Btn_Back = "$('.feed-top-icons:nth-child(2), .rant-top-bar > .share-icons').prepend('<a href=\"#\" id=\"onClickBack\" title=\"Back\" alt=\"Back\"><span class=\"icon-back2 icon\"></span></a>')";
+        var js_goBack = "$('#onClickBack').click(function(){parent.history.back();});";
 
-        var head_script = "$('head').append('console.log('Hello World!')');";
-
-        this.executeJavaScript(add_Btn_iOS);
         this.executeJavaScript(add_Btn_Android);
+        this.executeJavaScript(add_Btn_iOS);
         this.executeJavaScript(add_Btn_Back);
-        this.executeJavaScript(head_script);
+        this.executeJavaScript(js_goBack);
       });
 
       // Webview links that try to open in new window will open in default browser
