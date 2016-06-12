@@ -1,26 +1,28 @@
 const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
-const electronInstaller = require('electron-winstaller');
+//const electronInstaller = require('electron-winstaller');
+
+const app_name = 'devRant.io';
+const app_title = 'devRant // new Rant("fml");';
+const app_version = '1.0.1';
 
 let mainWindow
 
-const name = 'devRant // new Rant("fml");';
-
 function createWindow () {
   mainWindow = new BrowserWindow({
-        title: name,
-        movable: true,
-        width: 450,
-        height: 912,
-        minWidth: 450,
-        minHeight: 500,
-        maxWidth: 640,
-        fullscreenable: false,
-        resizable: true,
-        autoHideMenuBar: true,
-        icon: __dirname + '/favicon.png'
- })
+    title: app_title,
+    movable: true,
+    width: 450,
+    height: 912,
+    minWidth: 450,
+    minHeight: 500,
+    maxWidth: 640,
+    fullscreenable: false,
+    resizable: true,
+    autoHideMenuBar: true,
+    icon: '../icon/favicon.ico'
+  })
 
   mainWindow.loadURL('file://' + __dirname + '/index.html')
   mainWindow.setMenu(null)
@@ -29,40 +31,32 @@ function createWindow () {
   })
 }
 
-app.on('ready', createWindow)
-app.on('window-all-closed', function () {
-  if (process.platform !== 'darwin') {
+  app.on('ready', createWindow)
+  app.on('window-all-closed', function () {
+    if (process.platform !== 'darwin') {
     app.quit()
-  }
-})
-app.on('activate', function () {
-  if (mainWindow === null) {
+    }
+  })
+  app.on('activate', function () {
+    if (mainWindow === null) {
     createWindow()
-  }
-})
+    }
+  })
 
-resultPromise = electronInstaller.createWindowsInstaller({
+/**resultPromise = electronInstaller.createWindowsInstaller({
     appDirectory: '../build/devrant.io-win32-x64',
-    outputDirectory: '../package',
-    authors: 'devRant.io',
-    exe: 'devRant.io.exe'
-
-    appDirectory: '../build/devrant.io-win32-x64',
-    authors: 'devRant.io Team | [MEADOW_DEV]',
-    exe: 'devRant.io.exe',
+    outputDirectory: '../package/devrant.io-win32-x64',
+    name: app_name,
+    title: app_name,
+    version: app_version,
+    productName: app_name,
+    authors: app_name + ' Team | [MEADOW_DEV]',
+    exe: app_name + '.exe',
     iconUrl: '../icon/favicon.ico',
-    loadingGif: path.join(config.STATIC_PATH, 'loading.gif'),
-    name: config.APP_NAME,
-    noMsi: true,
-    outputDirectory: DIST_PATH,
-    productName: config.APP_NAME,
-    remoteReleases: config.GITHUB_URL,
-    setupExe: config.APP_NAME + 'Setup-v' + config.APP_VERSION + '.exe',
-    setupIcon: config.APP_ICON + '.ico',
-    signWithParams: signWithParams,
-    title: config.APP_NAME,
-    usePackageJson: false,
-    version: pkg.version
+    loadingGif: '../icon/Installing.gif',
+    noMsi: false,
+    setupExe: app_name + '-setup.exe',
+    setupIcon: '../favicon.ico'
   });
 
-resultPromise.then(() => console.log("It worked!"), (e) => console.log(`No dice: ${e.message}`));
+resultPromise.then(() => console.log("It worked!"), (e) => console.log(`No dice: ${e.message}`));**/
