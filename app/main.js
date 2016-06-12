@@ -1,7 +1,7 @@
 const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
-//const electronInstaller = require('electron-winstaller');
+const electronInstaller = require('electron-winstaller');
 
 const app_name = 'devRant.io';
 const app_title = 'devRant // new Rant("fml");';
@@ -43,7 +43,7 @@ function createWindow () {
     }
   })
 
-/**resultPromise = electronInstaller.createWindowsInstaller({
+resultPromise = electronInstaller.createWindowsInstaller({
     appDirectory: '../build/devrant.io-win32-x64',
     outputDirectory: '../package/devrant.io-win32-x64',
     name: app_name,
@@ -59,4 +59,4 @@ function createWindow () {
     setupIcon: '../favicon.ico'
   });
 
-resultPromise.then(() => console.log("It worked!"), (e) => console.log(`No dice: ${e.message}`));**/
+resultPromise.then(() => console.log("It worked!"), (e) => console.log(`No dice: ${e.message}`));
