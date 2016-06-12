@@ -15,6 +15,7 @@ This is the unofficial [Devrant.io](https://www.devrant.io/) web app. Built usin
 
 [<img width='45' height="45" align='left' alt='Paypal' src="https://upload.wikimedia.org/wikipedia/commons/5/53/PayPal_2014_logo.svg">](https://paypal.me/meadowcottage) If you wish to support me, the author of the app, directly. Feel free to use the paypal.me link to donate.
 
+
 ---------------------------------------------------------
 ## LICENSE:
 
