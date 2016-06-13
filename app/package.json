@@ -6,9 +6,20 @@
   "main": "main.js",
   "scripts": {
     "start": "electron main.js",
-    "build-win": "electron-packager . --overwrite --prune --out=../build --ignore='node_modules' --platform=win32 --arch=x64 --icon=../icon/favicon.ico --version-string.FileDescription=devRant.io",
-    "build-linux": "electron-packager . --overwrite --prune --out=../build --ignore='node_modules' --platform=linux --arch=x64 --icon=../icon/favicon.ico",
-    "build-osx": "electron-packager . --overwrite --prune --out=../build --ignore='node_modules' --platform=darwin --arch=x64 --icon=../icon/favicon.icns"
+    "clean": "cleanup",
+    "postinstall": "install-app-deps",
+    "package": "build",
+    "build-win": "electron-packager . --overwrite --prune --out=./dist --ignore='node_modules' --platform=win32 --arch=x64 --icon=../icon/favicon.ico --version-string.FileDescription=devRant.io",
+    "build-osx": "electron-packager . --overwrite --prune --out=./dist --ignore='node_modules' --platform=darwin --arch=x64 --icon=../icon/favicon.icns"
+  },
+  "build": {
+    "app-bundle-id": "uk.meadowcottage.devRant-io",
+    "app-category-type": "public.app-category.social-networking",
+    "iconUrl": "https://raw.githubusercontent.com/Meadowcottage/Devrant.io/master/icon/favicon.ico",
+    "win": {
+      "loadingGif": "build/loadingGif.gif",
+      "remoteReleases": "https://github.com/Meadowcottage/Devrant.io"
+    }
   },
   "repository": {
     "url": "https://github.com/meadowcottage/devrant.io.git"
