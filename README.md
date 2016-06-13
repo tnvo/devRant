@@ -1,6 +1,5 @@
 <h1 align="center">
-  <br>
-  <a href="https://devrant.io"><img width='200' height="200" alt='devRant.io' src="https://raw.githubusercontent.com/Meadowcottage/Devrant.io/master/icon/favicon.png"></a>
+  <a href="https://devrant.io"><img alt='devRant.io' src="https://raw.githubusercontent.com/Meadowcottage/Devrant.io/master/icon/favicon.png"></a>
   <br>
     devRant.io (UNOFFICIAL)
   <br>
