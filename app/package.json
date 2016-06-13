@@ -1,8 +1,8 @@
 {
-  "name": "devrant.io",
-  "productName": "devrant.io",
+  "name": "devRant.io",
+  "productName": "devRant.io",
   "version": "1.0.1",
-  "description": "The unofficial electron app for devrant.io",
+  "description": "The unofficial electron app for devRant.io",
   "main": "main.js",
   "scripts": {
     "start": "electron main.js",
