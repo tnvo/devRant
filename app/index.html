@@ -24,15 +24,18 @@
 
       // DOM ready executing scripts after the webview has loaded
       webview.addEventListener('dom-ready', function() {
-        // Remove Mobile Banner | Buttons Moved to Bottom of Window | Remove Scroll Bars | Menu Button Icons
+        webview.openDevTools();
+
+        // Remove Mobile Banner | Buttons Moved to Bottom of Window | Remove Scroll Bars | Menu Button Icons | Profile-page Back Button Styling
         this.insertCSS('.mobile-install-banner{display:none!important;} .bar-btm-guy{display:none!important;}');
         this.insertCSS('.addrant-btn, .addcomment-btn{bottom: 20px!important;}');
         this.insertCSS('::-webkit-scrollbar{display: none!important;}');
+        this.insertCSS('div.body-col2.profile-page > .rant-top-bar a {float: right!important; text-align: right!important; margin-right: 20px!important; height: 44px!important; font-size: 30px!important; margin-left: 10px!important; display: inline-block!important;}');
 
         //Adds Mobile Download Buttons to Menu | Adds Back Button
         var add_Btn_iOS = "$('<li><a target=\"_blank\" href=\"https://itunes.apple.com/us/app/apple-store/id1067512973?pt=117770459&ct=web_landing&mt=8\"><span class=\"icon-apple-logo1 icon\"></span>Download for iOS</a></li>').insertAfter('div.menu-modal > ul > li:nth-child(4)')";
         var add_Btn_Android = "$('<li><a target=\"_blank\" href=\"https://play.google.com/store/apps/details?id=com.hexicallabs.devrant\"><span class=\"icon-andriod-logo1 icon\"></span>Download for Android</a></li>').insertAfter('div.menu-modal > ul > li:nth-child(4)')";
-        var add_Btn_Back = "$('.feed-top-icons:nth-child(2), .rant-top-bar > .share-icons').prepend('<a href=\"#\" id=\"onClickBack\" title=\"Back\" alt=\"Back\"><span class=\"icon-back2 icon\"></span></a>')";
+        var add_Btn_Back = "$('.feed-top-icons:nth-child(2), .rant-top-bar > .share-icons, div.body-col2.profile-page > .rant-top-bar').prepend('<a href=\"#\" id=\"onClickBack\" title=\"Back\" alt=\"Back\"><span class=\"icon-back2 icon\"></span></a>')";
         var js_goBack = "$('#onClickBack').click(function(){parent.history.back();});";
 
         this.executeJavaScript(add_Btn_Android);
