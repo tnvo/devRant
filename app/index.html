@@ -24,8 +24,6 @@
 
       // DOM ready executing scripts after the webview has loaded
       webview.addEventListener('dom-ready', function() {
-        webview.openDevTools();
-
         // Remove Mobile Banner | Buttons Moved to Bottom of Window | Remove Scroll Bars | Menu Button Icons | Profile-page Back Button Styling
         this.insertCSS('.mobile-install-banner{display:none!important;} .bar-btm-guy{display:none!important;}');
         this.insertCSS('.addrant-btn, .addcomment-btn{bottom: 20px!important;}');
