@@ -1,7 +1,6 @@
 const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
-//var electronInstaller = require('electron-winstaller');
 
 const app_name = 'devRant.io';
 const app_title = 'devRant // new Rant("fml");';
@@ -43,19 +42,3 @@ function createWindow () {
     createWindow()
     }
   })
-
-  /**resultPromise = electronInstaller.createWindowsInstaller({
-    appDirectory: '.',
-    outputDirectory: '/dist/win',
-    loadingGif: '/build/loadingGif.gif',
-    authors: app_name + ' Team | [MEADOW_DEV]',
-    exe: app_name + '.exe',
-    description: app_description,
-    version: app_version,
-    title: app_title,
-    iconUrl: 'https://raw.githubusercontent.com/Meadowcottage/Devrant.io/master/icon/favicon.ico',
-    setupIcon: 'https://raw.githubusercontent.com/Meadowcottage/Devrant.io/master/icon/favicon.ico',
-    setupExe: app_name + '-' + app_version + '-setup.exe',
-    noMsi: true,
-    remoteReleases: 'https://github.com/Meadowcottage/Devrant.io'
-  });**/
