@@ -6,8 +6,12 @@
   "main": "main.js",
   "scripts": {
     "start": "electron main.js",
+    "package-win": "npm run build-win && npm run asar-win",
+    "package-osx": "npm run build-osx && npm run asar-osx",
     "build-win": "electron-packager . --overwrite --prune --out=../build --ignore='node_modules' --platform=win32 --arch=x64 --icon=../icon/favicon.ico --version-string.FileDescription=devRant.io",
-    "build-osx": "electron-packager . --overwrite --prune --out=../build --ignore='node_modules' --platform=darwin --arch=x64 --icon=../icon/favicon.icns"
+    "build-osx": "electron-packager . --overwrite --prune --out=../build --ignore='node_modules' --platform=darwin --arch=x64 --icon=../icon/favicon.icns",
+    "asar-win": "asar pack ../build/devRant.io-win32-x64/resources/app ../build/devRant.io-win32-x64/resources/app.asar && rmdir ../build/devRant.io-win32-x64/resources/app",
+    "asar-osx": "asar pack ../build/devRant.io-darwin-x64/devRant.io.app/Contents/Resources/app ../build/devRant.io-darwin-x64/devRant.io.app/Contents/Resources/app.asar && rm -rf ../build/devRant.io-darwin-x64/devRant.io.app/Contents/Resources/app"
   },
   "repository": {
     "type": "git",
@@ -24,6 +28,7 @@
   },
   "homepage": "https://github.com/meadowcottage/devrant.io/",
   "devDependencies": {
+    "asar": "^0.11.0",
     "electron-packager": "^7.0.4",
     "electron-prebuilt": "^1.2.2"
   }
