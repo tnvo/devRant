@@ -8,6 +8,10 @@
 
 <h4 align="center">This is the unofficial <a href="https://www.devrant.io/">Devrant.io</a> web app. Built using the <a href="http://electron.atom.io/">Electron</a> framework to take the current live feed site and give it to you as a desktop app.</h4>
 
+## Screenshots
+
+<img src="http://i.imgur.com/bnaBWBE.png">
+
 ## Install
 
 [Download the lastest version](https://github.com/Meadowcottage/Devrant.io/releases).
