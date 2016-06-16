@@ -20,8 +20,7 @@ function createWindow () {
     maxWidth: 640,
     fullscreenable: false,
     resizable: true,
-    autoHideMenuBar: true,
-    icon: '../icon/favicon.png'
+    autoHideMenuBar: true
   })
 
   mainWindow.loadURL('file://' + __dirname + '/index.html')
