@@ -4,3 +4,4 @@
  - Switch to using Electron Builder for packaging.
  - Create installer/dmg versions.
  - Keyboard Shortcuts for going back a page: 'Backspace' & 'Mouse back button'
+ - MacOS build to use Electron `titleBarStyle: "hidden"`
