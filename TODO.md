@@ -3,7 +3,7 @@
  - Add loading indicator.
  - Switch to using Electron Builder for packaging using [electron-builder](https://www.npmjs.com/package/electron-builder) or
  - Create installer/dmg versions. Either use electron-builder or [electron-installer-windows](https://www.npmjs.com/package/electron-installer-windows)/[electron-installer-dmg](https://www.npmjs.com/package/electron-installer-dmg)
- - Keyboard Shortcuts for going back a page: 'Backspace' & 'Mouse back button'.
+ - Keyboard Shortcuts for going back a page: 'Backspace' & 'Mouse back button' using [Keyboard Normalizer](https://www.npmjs.com/package/electron-shortcut-normalizer).
  - MacOS build to use Electron `titleBarStyle: "hidden"`
  - Add dark theme option to settings in menu.
  - Move download buttons in menu to separate menu like in settings menu.
@@ -15,4 +15,3 @@
  - Add Simplified downloads [electron-dl](https://www.npmjs.com/package/electron-dl).
  - Use [electron-osx-sign](https://www.npmjs.com/package/electron-osx-sign) to sign osx apps.
  - Enable desktop notifications(Windows, MacOS & Linux) using [electron-notifications](https://www.npmjs.com/package/electron-notifications).
- -
