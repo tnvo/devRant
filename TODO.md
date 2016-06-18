@@ -3,5 +3,9 @@
  - Add loading indicator.
  - Switch to using Electron Builder for packaging.
  - Create installer/dmg versions.
- - Keyboard Shortcuts for going back a page: 'Backspace' & 'Mouse back button'
+ - Keyboard Shortcuts for going back a page: 'Backspace' & 'Mouse back button'.
  - MacOS build to use Electron `titleBarStyle: "hidden"`
+ - Add dark theme option to settings in menu.
+ - Move download buttons in menu to separate menu like in settings menu.
+ - Add feedback button to menu.
+ - Add "devRant" title to center menubar.
