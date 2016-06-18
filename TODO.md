@@ -9,3 +9,4 @@
  - Move download buttons in menu to separate menu like in settings menu.
  - Add feedback button to menu.
  - Add "devRant" title to center menubar.
+ - Add auto-updater system.

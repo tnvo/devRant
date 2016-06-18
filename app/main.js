@@ -9,35 +9,21 @@ const app_description = 'The unofficial electron app for devRant.io';
 
 let mainWindow
 
-function createWindow () {
-  mainWindow = new BrowserWindow({
-    title: app_title,
-    movable: true,
-    width: 450,
-    height: 912,
-    minWidth: 450,
-    minHeight: 500,
-    maxWidth: 640,
-    fullscreenable: false,
-    resizable: true,
-    autoHideMenuBar: true
-  })
-
+app.on('ready', function createWindow () {
+  mainWindow = new BrowserWindow({title: app_title, movable: true, width: 450, height: 912, minWidth: 450, minHeight: 500, maxWidth: 640, fullscreenable: false, resizable: true, autoHideMenuBar: true})
   mainWindow.loadURL('file://' + __dirname + '/index.html')
   mainWindow.setMenu(null)
   mainWindow.on('closed', function () {
-    mainWindow = null
+  mainWindow = null
   })
-}
-
-  app.on('ready', createWindow)
-  app.on('window-all-closed', function () {
-    if (process.platform !== 'darwin') {
-    app.quit()
-    }
-  })
-  app.on('activate', function () {
-    if (mainWindow === null) {
-    createWindow()
-    }
-  })
+})
+app.on('window-all-closed', function () {
+  if (process.platform !== 'darwin') {
+  app.quit()
+  }
+})
+app.on('activate', function () {
+  if (mainWindow === null) {
+  createWindow()
+  }
+})
