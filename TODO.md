@@ -15,3 +15,4 @@
  - Add Simplified downloads [electron-dl](https://www.npmjs.com/package/electron-dl).
  - Use [electron-osx-sign](https://www.npmjs.com/package/electron-osx-sign) to sign osx apps.
  - Enable desktop notifications(Windows, MacOS & Linux) using [electron-notifications](https://www.npmjs.com/package/electron-notifications).
+ - Free Stickers menu "Learn more" button open in default browser rather than in app.
