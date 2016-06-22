@@ -31,6 +31,15 @@ const menu_content = [
       { label: 'Minimize', accelerator: 'CommandOrControl+M', role: 'minimize' },
       { label: 'Close', accelerator: 'CommandOrControl+W', role: 'close' }
     ]
+  }, {
+    label: 'Help',
+    role: 'help',
+    submenu: [
+      { label: 'About devRant', click: function() { require('electron').shell.openExternal("https://github.com/Meadowcottage/devRant.io" + app_version) } },
+      { label: 'View devRant', click: function() { require('electron').shell.openExternal("https://devrant.io") } },
+      { type: 'separator' },
+      { label: 'Changelog', click: function() { require('electron').shell.openExternal("https://github.com/Meadowcottage/devRant.io/releases/tag/" + app_version) } }
+    ]
   }
 ];
 
