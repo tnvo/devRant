@@ -34,6 +34,9 @@ const menu_content = [
   }, {
     label: 'View',
     submenu: [
+      { label: 'Forward', accelerator: 'CommandOrControl+Right', click: function(item,focusedWindow) {if (focusedWindow) focusedWindow.webContents.goForward();console.log("Going forward a page!")} },
+      { label: 'Back', accelerator: 'CommandOrControl+Left', click: function(item,focusedWindow) {if (focusedWindow) focusedWindow.webContents.goBack();console.log("Going back a page!")} },
+      { type: 'separator' },
       { label: 'Reload', accelerator: 'CommandOrControl+R', click: function(item,focusedWindow) {if (focusedWindow) focusedWindow.webContents.reload();} }
     ]
   }, {
