@@ -7,6 +7,7 @@ const app_description = 'The unofficial electron app for devRant.io';
 const app_menu = electron.Menu;
 const BrowserWindow = electron.BrowserWindow;
 
+const GhReleases = require('electron-gh-releases');
 const macOS_menu_content = [
   {
     label: 'Application',
@@ -59,6 +60,38 @@ const menu_content = [
 ];
 
 let mainWindow
+
+// Auto Update Options
+let options = {
+  repo: 'meadowcottage/devRant.io',
+  currentVersion: app.getVersion()
+}
+
+app.on('will-finish-launching', function createWindow () {
+  const updater = new GhReleases(options)
+
+  // Check for updates
+  // `status` returns true if there is a new update available
+  updater.check((err, status) => {
+    if (!err && status) {
+    // Download the update
+    updater.download()
+    console.log('Downloading New Update.')
+  } else {
+    console.log('App is Up To Date.');
+  }
+  })
+
+  // When an update has been downloaded
+  updater.on('update-downloaded', (info) => {
+    // Restart the app and install the update
+    updater.install()
+    console.log('Installing New App Update.')
+  })
+
+  // Access electrons autoUpdater
+  updater.autoUpdater
+})
 
 app.on('ready', function createWindow () {
   mainWindow = new BrowserWindow({
