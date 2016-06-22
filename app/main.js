@@ -1,13 +1,21 @@
+//Electron
 const electron = require('electron');
+
+//App Info
 const app = electron.app;
 const app_name = 'devRant.io';
 const app_title = 'devRant // new Rant("fml");';
 const app_version = '1.0.3';
 const app_description = 'The unofficial electron app for devRant.io';
 const app_menu = electron.Menu;
+
+// App Window
 const BrowserWindow = electron.BrowserWindow;
 
+//Auto Update
 const GhReleases = require('electron-gh-releases');
+
+//Menu Contents for MacOS ONLY
 const macOS_menu_content = [
   {
     label: 'Application',
@@ -20,6 +28,7 @@ const macOS_menu_content = [
   },
 ]
 
+//General Menu Contents
 const menu_content = [
   {
     label: 'Edit',
@@ -59,6 +68,7 @@ const menu_content = [
   }
 ];
 
+// Main App Window
 let mainWindow
 
 // Auto Update Options
