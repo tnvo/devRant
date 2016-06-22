@@ -7,6 +7,18 @@ const app_description = 'The unofficial electron app for devRant.io';
 const app_menu = electron.Menu;
 const BrowserWindow = electron.BrowserWindow;
 
+const macOS_menu_content = [
+  {
+    label: 'Application',
+    submenu: [
+      { label: 'Hide ' + app_name, accelerator: 'Command+H', role: 'hide' },
+      { label: 'Hide Others', accelerator: 'Command+Shift+H', role: 'hideothers' },
+      { type: 'separator' },
+      { label: 'Quit', accelerator: 'Command+Q', click: function() {app.quit();} }
+    ]
+  },
+]
+
 const menu_content = [
   {
     label: 'Edit',
@@ -58,7 +70,11 @@ app.on('ready', function createWindow () {
     resizable: true,
     autoHideMenuBar: true
   })
-  app_menu.setApplicationMenu(app_menu.buildFromTemplate(menu_content));
+  if (process.platform == 'darwin') {
+    app_menu.setApplicationMenu(app_menu.buildFromTemplate(macOS_menu_content + menu_content));
+  } else {
+    app_menu.setApplicationMenu(app_menu.buildFromTemplate(menu_content));
+  }
   mainWindow.loadURL('file://' + __dirname + '/index.html')
   mainWindow.on('closed', function () {
   mainWindow = null
