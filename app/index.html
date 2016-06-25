@@ -16,11 +16,18 @@
   <body>
     <webview id='webview' src='https://www.devrant.io/feed'></webview>
     <script>
+
       //Constant variable made from 'webview' ID
       const webview = document.getElementById('webview');
 
       // DOM ready executing scripts after the webview has loaded
       webview.addEventListener('dom-ready', function() {
+
+        // If OS is Darwn(MacOS)
+        if (process.platform == 'darwin') {
+          document.body.style.marginTop = "24px";
+        }
+
         // Remove Mobile Banner | Buttons Moved to Bottom of Window | Remove Scroll Bars | Menu Button Icons | Profile-page Back Button Styling
         this.insertCSS('.mobile-install-banner{display:none!important;} .bar-btm-guy{display:none!important;}');
         this.insertCSS('.addrant-btn, .addcomment-btn{bottom: 20px!important;}');
