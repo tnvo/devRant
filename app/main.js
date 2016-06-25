@@ -106,6 +106,9 @@ const menu_content = [
 // Main App Window
 let mainWindow
 
+// Chooses titleBarStyle based on OS
+var app_titleBarStyle;
+
 // Chooses menu to load based on OS
 var app_OS_menu;
 
@@ -153,6 +156,7 @@ if (process.platform == 'darwin') {
 app.on('ready', function createWindow () {
   mainWindow = new BrowserWindow({
     title: app_title,
+    titleBarStyle: app_titleBarStyle,
     movable: true,
     width: 450,
     height: 912,
