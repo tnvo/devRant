@@ -9,9 +9,9 @@
     "package-win": "npm run build-win && npm run asar-win",
     "package-linux": "npm run build-linux && npm run asar-linux",
     "package-osx": "npm run build-osx && npm run asar-osx",
-    "build-win": "electron-packager . --overwrite --version=1.0.2 --prune --out=../build --ignore='node_modules' --platform=win32 --arch=x64 --icon=../icon/favicon.ico --version-string.FileDescription=devRant.io",
-    "build-linux": "electron-packager . --overwrite --version=1.0.2 --prune --out=../build --ignore='node_modules' --platform=linux --arch=x64 --icon=../icon/favicon.png",
-    "build-osx": "electron-packager . --overwrite --version=1.0.2 --prune --out=../build --ignore='node_modules' --platform=darwin --arch=x64 --icon=../icon/favicon.icns",
+    "build-win": "electron-packager . --overwrite --version=1.0.2 --prune --out=../build --platform=win32 --arch=x64 --icon=../icon/favicon.ico --version-string.FileDescription=devRant.io",
+    "build-linux": "electron-packager . --overwrite --version=1.0.2 --prune --out=../build --platform=linux --arch=x64 --icon=../icon/favicon.png",
+    "build-osx": "electron-packager . --overwrite --version=1.0.2 --prune --out=../build --platform=darwin --arch=x64 --icon=../icon/favicon.icns",
     "asar-win": "asar pack ../build/devRant.io-win32-x64/resources/app ../build/devRant.io-win32-x64/resources/app.asar && rimraf ../build/devRant.io-win32-x64/resources/app",
     "asar-linux": "asar pack ../build/devRant.io-linux-x64/resources/app ../build/devRant.io-linux-x64/resources/app.asar && rimraf ../build/devRant.io-linux-x64/resources/app",
     "asar-osx": "asar pack ../build/devRant.io-darwin-x64/devRant.io.app/Contents/Resources/app ../build/devRant.io-darwin-x64/devRant.io.app/Contents/Resources/app.asar && rm -rf ../build/devRant.io-darwin-x64/devRant.io.app/Contents/Resources/app"
