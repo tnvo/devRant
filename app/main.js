@@ -106,9 +106,6 @@ const menu_content = [
 // Main App Window
 let mainWindow
 
-// Chooses titleBarStyle based on OS
-var app_titleBarStyle;
-
 // Chooses menu to load based on OS
 var app_OS_menu;
 
