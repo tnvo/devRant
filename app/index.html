@@ -26,16 +26,15 @@
 
         // If OS is Darwn(MacOS)
         if (process.platform == 'darwin') {
-          document.body.style.marginTop = "24px";
-          if ($('modal-overlay').css('display:block;')) {
-            document.body.style.backgroundColor = "#43455E";
-            $('modal-x').css('margin-top: -24px;');
-          }
+          this.insertCSS('.rant-top-bar{padding-top: 24px!important;}');
+          this.insertCSS('.rantlist{margin-top: 24px!important;}');
+          this.insertCSS('.addrant-btn, .addcomment-btn{bottom: 30px!important;}');
+        } else {
+          this.insertCSS('.addrant-btn, .addcomment-btn{bottom: 20px!important;}');
         }
 
-        // Remove Mobile Banner | Buttons Moved to Bottom of Window | Remove Scroll Bars | Menu Button Icons | Profile-page Back Button Styling
+        // Remove Mobile Banner | Remove Scroll Bars | Menu Button Icons | Profile-page Back Button Styling
         this.insertCSS('.mobile-install-banner{display:none!important;} .bar-btm-guy{display:none!important;}');
-        this.insertCSS('.addrant-btn, .addcomment-btn{bottom: 20px!important;}');
         this.insertCSS('::-webkit-scrollbar{display: none!important;}');
         this.insertCSS('div.body-col2.profile-page > .rant-top-bar a {float: right!important; text-align: right!important; margin-right: 20px!important; height: 44px!important; font-size: 30px!important; margin-left: 10px!important; display: inline-block!important;}');
 
