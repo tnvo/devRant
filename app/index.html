@@ -1,57 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>devRant // new Rant("fml");</title>
     <style>
-      body {
-        margin: 0;
-        height: 100vh;
-        background-color: #54556E;
-      }
-      #webview {
-        height: 100vh;
-      }
-    </style>
-  </head>
-  <body>
-    <webview id='webview' src='https://www.devrant.io/feed'></webview>
-    <script>
-
-      //Constant variable made from 'webview' ID
-      const webview = document.getElementById('webview');
-
-      // DOM ready executing scripts after the webview has loaded
-      webview.addEventListener('dom-ready', function() {
-
-        // If OS is Darwn(MacOS)
-        if (process.platform == 'darwin') {
-          this.insertCSS('.rant-top-bar{padding-top: 24px!important;}');
-          this.insertCSS('.filter-top-bar{margin-top: 70px!important;}');
-          this.insertCSS('.addrant-btn, .addcomment-btn{bottom: 10px!important;}');
-        } else {
-          this.insertCSS('.addrant-btn, .addcomment-btn{bottom: 20px!important;}');
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #54556E;
         }
 
-        // Remove Mobile Banner | Remove Scroll Bars | Menu Button Icons | Profile-page Back Button Styling
-        this.insertCSS('.mobile-install-banner{display:none!important;} .bar-btm-guy{display:none!important;}');
-        this.insertCSS('::-webkit-scrollbar{display: none!important;}');
-        this.insertCSS('div.body-col2.profile-page > .rant-top-bar a {float: right!important; text-align: right!important; margin-right: 20px!important; height: 44px!important; font-size: 30px!important; margin-left: 10px!important; display: inline-block!important;}');
+        #webview {
+            height: 100vh;
+        }
+    </style>
+</head>
 
-        //Adds Mobile Download Buttons to Menu | Adds Back Button | Adds Notifications Button
-        var add_Btn_iOS = "$('<li><a target=\"_blank\" href=\"https://itunes.apple.com/us/app/apple-store/id1067512973?pt=117770459&ct=web_landing&mt=8\"><span class=\"icon-apple-logo1 icon\"></span>Download for iOS</a></li>').insertAfter('div.menu-modal > ul > li:nth-child(4)')";
-        var add_Btn_Android = "$('<li><a target=\"_blank\" href=\"https://play.google.com/store/apps/details?id=com.hexicallabs.devrant\"><span class=\"icon-andriod-logo1 icon\"></span>Download for Android</a></li>').insertAfter('div.menu-modal > ul > li:nth-child(4)')";
-        var add_Btn_Back = "$('.feed-top-icons:nth-child(2), .rant-top-bar > .share-icons, div.body-col2.profile-page > .rant-top-bar').prepend('<a href=\"javascript: history.back();\" title=\"Back\" alt=\"Back\"><span class=\"icon-back2 icon\"></span></a>')";
+<body>
+    <webview id='webview' src='https://www.devrant.io/feed'></webview>
+    <script>
+        //Constant variable made from 'webview' ID
+        const webview = document.getElementById('webview');
 
-        this.executeJavaScript(add_Btn_Android);
-        this.executeJavaScript(add_Btn_iOS);
-        this.executeJavaScript(add_Btn_Back);
-      });
+        // DOM ready executing scripts after the webview has loaded
+        webview.addEventListener('dom-ready', function() {
 
-      // Webview links that try to open in new window will open in default browser
-      webview.addEventListener('new-window', function(event) {
-        require('electron').shell.openExternal(event.url);
-      });
+            // If OS is Darwn(MacOS)
+            if (process.platform == 'darwin') {
+                this.insertCSS('.rant-top-bar{padding-top: 24px!important;} .filter-top-bar{margin-top: 70px!important;} .addrant-btn, .addcomment-btn{bottom: 10px!important;}');
+            } else {
+                this.insertCSS('.addrant-btn, .addcomment-btn{bottom: 20px!important;}');
+            }
+
+            // Remove Mobile Banner | Remove Scroll Bars | Menu Button Icons | Profile-page Back Button Styling
+            this.insertCSS('.mobile-install-banner{display:none!important;} .bar-btm-guy{display:none!important;} ::-webkit-scrollbar{display: none!important;} div.body-col2.profile-page > .rant-top-bar a {float: right!important; text-align: right!important; margin-right: 20px!important; height: 44px!important; font-size: 30px!important; margin-left: 10px!important; display: inline-block!important;}');
+
+            //Adds Mobile Download Buttons to Menu | Adds Back Button
+            this.executeJavaScript("$('<li><a target=\"_blank\" href=\"https://play.google.com/store/apps/details?id=com.hexicallabs.devrant\"><span class=\"icon-andriod-logo1 icon\"></span>Download for Android</a></li>').insertAfter('div.menu-modal > ul > li:nth-child(4)')");
+            this.executeJavaScript("$('<li><a target=\"_blank\" href=\"https://itunes.apple.com/us/app/apple-store/id1067512973?pt=117770459&ct=web_landing&mt=8\"><span class=\"icon-apple-logo1 icon\"></span>Download for iOS</a></li>').insertAfter('div.menu-modal > ul > li:nth-child(4)')");
+            this.executeJavaScript("$('.feed-top-icons:nth-child(2), .rant-top-bar > .share-icons, div.body-col2.profile-page > .rant-top-bar').prepend('<a href=\"javascript: history.back();\" title=\"Back\" alt=\"Back\"><span class=\"icon-back2 icon\"></span></a>')");
+        });
+
+        // Webview links that try to open in new window will open in default browser
+        webview.addEventListener('new-window', function(event) {
+            require('electron').shell.openExternal(event.url);
+        });
     </script>
-  </body>
+</body>
+
 </html>
