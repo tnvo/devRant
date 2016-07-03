@@ -15,17 +15,9 @@ const BrowserWindow = electron.BrowserWindow;
 //Auto Update
 const GhReleases = require('electron-gh-releases');
 
-//Menu Contents for MacOS ONLY
-const darwin_menu_content = [
+//General Menu Contents
+const menu_content = [
   {
-    label: 'Application',
-    submenu: [
-      { label: 'Hide ' + app_name, accelerator: 'Command+H', role: 'hide' },
-      { label: 'Hide Others', accelerator: 'Command+Shift+H', role: 'hideothers' },
-      { type: 'separator' },
-      { label: 'Quit', accelerator: 'Command+Q', click: function() {app.quit();} }
-    ]
-  }, {
     label: 'Edit',
     submenu: [
       { label: 'Undo', accelerator: 'CommandOrControl+Z', role: 'undo' },
@@ -39,8 +31,8 @@ const darwin_menu_content = [
   }, {
     label: 'View',
     submenu: [
-      { label: 'Forward', accelerator: 'CommandOrControl+Right', click: function(item,focusedWindow) {if (focusedWindow) focusedWindow.webContents.goForward();console.log("Going forward a page!")} },
-      { label: 'Back', accelerator: 'CommandOrControl+Left', click: function(item,focusedWindow) {if (focusedWindow) focusedWindow.webContents.goBack();console.log("Going back a page!")} },
+      { label: 'Forward', accelerator: 'CommandOrControl+Right', click: function(item,focusedWindow) {if (focusedWindow) focusedWindow.webContents.goForward();} },
+      { label: 'Back', accelerator: 'CommandOrControl+Left', click: function(item,focusedWindow) {if (focusedWindow) focusedWindow.webContents.goBack();focusedWindow.webContents.reload()} },
       { type: 'separator' },
       { label: 'Reload', accelerator: 'CommandOrControl+R', click: function(item,focusedWindow) {if (focusedWindow) focusedWindow.webContents.reload();} }
     ]
@@ -63,44 +55,17 @@ const darwin_menu_content = [
   }
 ];
 
-//General Menu Contents
-const menu_content = [
+//Menu Contents for MacOS ONLY
+const darwin_menu_content = [
   {
-    label: 'Edit',
+    label: 'Application',
     submenu: [
-      { label: 'Undo', accelerator: 'CommandOrControl+Z', role: 'undo' },
-      { label: 'Redo', accelerator: 'Shift+CommandOrControl+Z', role: 'redo' },
+      { label: 'Hide ' + app_name, accelerator: 'Command+H', role: 'hide' },
+      { label: 'Hide Others', accelerator: 'Command+Shift+H', role: 'hideothers' },
       { type: 'separator' },
-      { label: 'Cut', accelerator: 'CommandOrControl+X', role: 'cut' },
-      { label: 'Copy', accelerator: 'CommandOrControl+C', role: 'copy' },
-      { label: 'Paste', accelerator: 'CommandOrControl+V', role: 'paste' },
-      { label: 'Select All', accelerator: 'CommandOrControl+A', role: 'selectall' }
+      { label: 'Quit', accelerator: 'Command+Q', click: function() {app.quit();} }
     ]
-  }, {
-    label: 'View',
-    submenu: [
-      { label: 'Forward', accelerator: 'CommandOrControl+Right', click: function(item,focusedWindow) {if (focusedWindow) focusedWindow.webContents.goForward();console.log("Going forward a page!")} },
-      { label: 'Back', accelerator: 'CommandOrControl+Left', click: function(item,focusedWindow) {if (focusedWindow) focusedWindow.webContents.goBack();console.log("Going back a page!")} },
-      { type: 'separator' },
-      { label: 'Reload', accelerator: 'CommandOrControl+R', click: function(item,focusedWindow) {if (focusedWindow) focusedWindow.webContents.reload();} }
-    ]
-  }, {
-    label: 'Window',
-    role: 'window',
-    submenu: [
-      { label: 'Minimize', accelerator: 'CommandOrControl+M', role: 'minimize' },
-      { label: 'Close', accelerator: 'CommandOrControl+W', role: 'close' }
-    ]
-  }, {
-    label: 'Help',
-    role: 'help',
-    submenu: [
-      { label: 'About devRant', click: function() { require('electron').shell.openExternal("https://github.com/Meadowcottage/devRant.io" + app_version) } },
-      { label: 'View devRant', click: function() { require('electron').shell.openExternal("https://devrant.io") } },
-      { type: 'separator' },
-      { label: 'Changelog', click: function() { require('electron').shell.openExternal("https://github.com/Meadowcottage/devRant.io/releases/tag/" + app_version) } }
-    ]
-  }
+  }, menu_content
 ];
 
 // Main App Window
