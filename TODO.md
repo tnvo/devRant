@@ -1,18 +1,18 @@
 # TODO:
- - Switch 'Back' button to use webview.goBack() method rather than JS.
- - Add loading indicator.
- - Switch to using Electron Builder for packaging using [electron-builder](https://www.npmjs.com/package/electron-builder) or
- - Create installer/dmg versions. Either use electron-builder or [electron-installer-windows](https://www.npmjs.com/package/electron-installer-windows)/[electron-installer-dmg](https://www.npmjs.com/package/electron-installer-dmg)
- - Keyboard Shortcuts for going back a page: 'Backspace' & 'Mouse back button' using [Keyboard Normalizer](https://www.npmjs.com/package/electron-shortcut-normalizer).
- - MacOS build to use Electron `titleBarStyle: "hidden"`
- - Add dark theme option to settings in menu.
- - Move download buttons in menu to separate menu like in settings menu.
- - Add feedback button to menu.
- - Add "devRant" title to center menubar.
- - Add app info to bottom of menu screen.
- - Add auto-updater system. [electron-updater](https://www.npmjs.com/package/electron-updater) & [electron-gh-releases](https://www.npmjs.com/package/electron-gh-releases)
- - Add context menu shortcuts (EG: Right click to copy link to rant or save image/gif) [electron-context-menu](https://www.npmjs.com/package/electron-context-menu).
- - Add Simplified downloads [electron-dl](https://www.npmjs.com/package/electron-dl).
- - Use [electron-osx-sign](https://www.npmjs.com/package/electron-osx-sign) to sign osx apps.
- - Enable desktop notifications(Windows, MacOS & Linux) using [electron-notifications](https://www.npmjs.com/package/electron-notifications).
- - Free Stickers menu "Learn more" button open in default browser rather than in app.
+ - [ ] Switch 'Back' button to use webview.goBack() method rather than JS.
+ - [ ] Add loading indicator.
+ - [ ] Switch to using Electron Builder for packaging using [electron-builder](https://www.npmjs.com/package/electron-builder) or
+ - [ ] Create installer/dmg versions. Either use electron-builder or [electron-installer-windows](https://www.npmjs.com/package/electron-installer-windows)/[electron-installer-dmg](https://www.npmjs.com/package/electron-installer-dmg)
+ - [ ] Keyboard Shortcuts for going back a page: 'Backspace' & 'Mouse back button' using [Keyboard Normalizer](https://www.npmjs.com/package/electron-shortcut-normalizer).
+ - [x] MacOS build to use Electron `titleBarStyle: "hidden"`
+ - [ ] Add dark theme option to settings in menu.
+ - [ ] Move download buttons in menu to separate menu like in settings menu.
+ - [ ] Add feedback button to menu.
+ - [ ] Add "devRant" title to center menubar.
+ - [ ] Add app info to bottom of menu screen.
+ - [x] Add auto-updater system. [electron-updater](https://www.npmjs.com/package/electron-updater) & [electron-gh-releases](https://www.npmjs.com/package/electron-gh-releases)
+ - [ ] Add context menu shortcuts (EG: Right click to copy link to rant or save image/gif) [electron-context-menu](https://www.npmjs.com/package/electron-context-menu).
+ - [ ] Add Simplified downloads [electron-dl](https://www.npmjs.com/package/electron-dl).
+ - [ ] Use [electron-osx-sign](https://www.npmjs.com/package/electron-osx-sign) to sign osx apps.
+ - [ ] Enable desktop notifications(Windows, MacOS & Linux) using [electron-notifications](https://www.npmjs.com/package/electron-notifications).
+ - [x] Free Stickers menu "Learn more" button open in default browser rather than in app.
