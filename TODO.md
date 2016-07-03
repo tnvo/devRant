@@ -5,7 +5,7 @@
  - [ ] Create installer/dmg versions. Either use electron-builder or [electron-installer-windows](https://www.npmjs.com/package/electron-installer-windows)/[electron-installer-dmg](https://www.npmjs.com/package/electron-installer-dmg)
  - [ ] Keyboard Shortcuts for going back a page: 'Backspace' & 'Mouse back button' using [Keyboard Normalizer](https://www.npmjs.com/package/electron-shortcut-normalizer).
  - [x] MacOS build to use Electron `titleBarStyle: "hidden"`
- - [ ] Add dark theme option to settings in menu.
+ - [x] Add dark theme option to settings in menu.
  - [ ] Move download buttons in menu to separate menu like in settings menu.
  - [ ] Add feedback button to menu.
  - [ ] Add "devRant" title to center menubar.
