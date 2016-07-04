@@ -122,7 +122,7 @@ app.on('ready', function createWindow () {
   mainWindow = new BrowserWindow({
     title: app_title,
     titleBarStyle: app_titleBarStyle,
-    backgroundColor: '#54556E',
+    backgroundColor: '#40415a',
     movable: true,
     width: 450,
     height: 912,

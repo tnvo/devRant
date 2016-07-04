@@ -8,7 +8,7 @@
         body {
             margin: 0;
             height: 100vh;
-            background-color: #54556E;
+            background-color: #40415a;
         }
 
         #webview {
@@ -31,7 +31,7 @@
 
             // If OS is Darwn(MacOS)
             if (process.platform == 'darwin') {
-                this.insertCSS('.rant-top-bar{padding-top: 24px!important;} .filter-top-bar{margin-top: 70px!important;} .addrant-btn, .addcomment-btn{bottom: 10px!important;}');
+                this.insertCSS('.rant-top-bar{padding-top: 24px!important;} .post-details{margin-top: 24px!important;} .filter-top-bar, .profile-details{margin-top: 70px!important;} .addrant-btn, .addcomment-btn{bottom: 10px!important;}');
             } else {
                 this.insertCSS('.addrant-btn, .addcomment-btn{bottom: 20px!important;}');
             }
@@ -40,7 +40,7 @@
             this.insertCSS('.rant-top-bar{background-color: #40415a!important;} .mobile-install-banner{display:none!important;} .bar-btm-guy{display:none!important;} ::-webkit-scrollbar{display: none!important;} div.body-col2.profile-page > .rant-top-bar a {float: right!important; text-align: right!important; margin-right: 20px!important; height: 44px!important; font-size: 30px!important; margin-left: 10px!important; display: inline-block!important;}');
             if (isDarkTheme == true) {
               console.log("Enabling Dark Theme.")
-              this.insertCSS('body{background-color: #40415a!important;} .rantlist li{background-color: #40415a!important; border-top: 2px solid #54556E!important;} .rantlist-title{color: #E0E0E0!important;} .rantlist-tags a{background-color: #40415a!important; border: 2px solid #54556E!important;}');
+              this.insertCSS('body, .rantlist li, .profile-details, .profile-tabs, .rantlist-tags a, .rantlist-tags a{background-color: #40415a!important;} .rant-top-bar, .tab-line, .reply-bar{background-color: #54556E!important;} .rantlist li{border-top: 2px solid #54556E!important;} .profile-tabs{border-bottom: 2px solid #54556E!important;} div.username-row > a.username-details, .rantlist-title, .profile-detail-col2, .tabs, .profile-detail-col2 > a{color: #E0E0E0!important;} .rantlist-tags a{border: 2px solid #54556E!important;}');
             }
             //Extenal Links Open in New Window | Adds Mobile Download Buttons to Menu | Adds Back Button
             this.executeJavaScript("$('a').not('[href*=\"mailto:\"]').each(function (){var isInternalLink = new RegExp('/' + window.location.host + '/');if ( ! isInternalLink.test(this.href) ) {$(this).attr('target', '_blank');}});");
