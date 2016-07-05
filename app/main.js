@@ -109,7 +109,7 @@ app.on('will-finish-launching', function createWindow () {
   updater.autoUpdater
 })
 
-// If OS is Darwn(MacOS)
+// If OS is Darwin(MacOS)
 if (process.platform == 'darwin') {
   app_titleBarStyle = 'hidden-inset';
   app_OS_menu = darwin_menu_content;
