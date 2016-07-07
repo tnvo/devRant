@@ -10,7 +10,7 @@
  - [ ] Add feedback button to menu.
  - [ ] Add "devRant" title to center menubar.
  - [x] Add app info to bottom of menu screen.
- - [x] Add auto-updater system. [electron-updater](https://www.npmjs.com/package/electron-updater) & [electron-gh-releases](https://www.npmjs.com/package/electron-gh-releases)
+ - [] Add auto-updater system. [electron-updater](https://www.npmjs.com/package/electron-updater) & [electron-gh-releases](https://www.npmjs.com/package/electron-gh-releases)
  - [ ] Add context menu shortcuts (EG: Right click to copy link to rant or save image/gif) [electron-context-menu](https://www.npmjs.com/package/electron-context-menu).
  - [ ] Add Simplified downloads [electron-dl](https://www.npmjs.com/package/electron-dl).
  - [ ] Use [electron-osx-sign](https://www.npmjs.com/package/electron-osx-sign) to sign osx apps.

@@ -12,9 +12,6 @@ const app_menu = electron.Menu;
 // App Window
 const BrowserWindow = electron.BrowserWindow;
 
-//Auto Update
-const GhReleases = require('electron-gh-releases');
-
 //General Menu Contents
 const menu_content = [
   {
@@ -111,38 +108,6 @@ var app_titleBarStyle;
 
 // Chooses menu to load based on OS
 var app_OS_menu;
-
-// Auto Update Options
-let options = {
-  repo: 'meadowcottage/devRant.io',
-  currentVersion: app.getVersion()
-}
-
-app.on('will-finish-launching', function createWindow () {
-  const updater = new GhReleases(options)
-
-  // Check for updates
-  // `status` returns true if there is a new update available
-  updater.check((err, status) => {
-    if (!err && status) {
-    // Download the update
-    updater.download()
-    console.log('Downloading New Update.')
-  } else {
-    console.log('App is Up To Date.');
-  }
-  })
-
-  // When an update has been downloaded
-  updater.on('update-downloaded', (info) => {
-    // Restart the app and install the update
-    updater.install()
-    console.log('Installing New App Update.')
-  })
-
-  // Access electrons autoUpdater
-  updater.autoUpdater
-})
 
 // If OS is Darwin(MacOS)
 if (process.platform == 'darwin') {

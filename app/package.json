@@ -30,9 +30,6 @@
     "url": "https://github.com/meadowcottage/devrant.io/issues/"
   },
   "homepage": "https://github.com/meadowcottage/devrant.io/",
-  "dependencies": {
-    "electron-gh-releases": "^2.0.3"
-  },
   "devDependencies": {
     "asar": "^0.11.0",
     "electron-packager": "^7.0.4",
