@@ -27,8 +27,7 @@
       ]
     },
     "win": {
-      "remoteReleases": "https://github.com/meadowcottage/devrant.io",
-      "iconUrl": "https://raw.githubusercontent.com/Meadowcottage/devRant.io/master/icon/favicon.ico"
+      "remoteReleases": "https://github.com/meadowcottage/devrant"
     }
   },
   "devDependencies": {

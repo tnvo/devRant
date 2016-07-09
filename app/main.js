@@ -3,10 +3,10 @@ const electron = require('electron');
 
 //App Info
 const app = electron.app;
-const app_name = 'devRant.io';
+const app_name = 'devRant';
 const app_title = 'devRant // new Rant("fml");';
 const app_version = '1.0.3';
-const app_description = 'The unofficial electron app for devRant.io';
+const app_description = 'The unofficial electron app for devRant';
 const app_menu = electron.Menu;
 
 // App Window
@@ -44,10 +44,10 @@ const menu_content = [
     label: 'Help',
     role: 'help',
     submenu: [
-      { label: 'About devRant', click: function() { require('electron').shell.openExternal("https://github.com/Meadowcottage/devRant.io/releases/tag/" + app_version) } },
+      { label: 'About devRant', click: function() { require('electron').shell.openExternal("https://github.com/Meadowcottage/devRant/releases/tag/" + app_version) } },
       { label: 'View devRant', click: function() { require('electron').shell.openExternal("https://devrant.io") } },
       { type: 'separator' },
-      { label: 'Changelog', click: function() { require('electron').shell.openExternal("https://github.com/Meadowcottage/devRant.io/releases/tag/" + app_version) } }
+      { label: 'Changelog', click: function() { require('electron').shell.openExternal("https://github.com/Meadowcottage/devRant/releases/tag/" + app_version) } }
     ]
   }
 ];
@@ -92,10 +92,10 @@ const darwin_menu_content = [
     label: 'Help',
     role: 'help',
     submenu: [
-      { label: 'About devRant', click: function() { require('electron').shell.openExternal("https://github.com/Meadowcottage/devRant.io" + app_version) } },
+      { label: 'About devRant', click: function() { require('electron').shell.openExternal("https://github.com/Meadowcottage/devRant/releases/tag/" + app_version) } },
       { label: 'View devRant', click: function() { require('electron').shell.openExternal("https://devrant.io") } },
       { type: 'separator' },
-      { label: 'Changelog', click: function() { require('electron').shell.openExternal("https://github.com/Meadowcottage/devRant.io/releases/tag/" + app_version) } }
+      { label: 'Changelog', click: function() { require('electron').shell.openExternal("https://github.com/Meadowcottage/devRant/releases/tag/" + app_version) } }
     ]
   }
 ];
