@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://devrant.io"><img alt='devRant.io' width='256' height='256' src="https://raw.githubusercontent.com/Meadowcottage/devRant.io/master/icon/favicon-512.png"></a>
+  <a href="https://devrant.io"><img alt='devRant.io' width='256' height='256' src="https://raw.githubusercontent.com/Meadowcottage/devRant.io/master/build/icon-512.png"></a>
   <br>
     devRant.io (UNOFFICIAL)
   <br>
@@ -18,7 +18,7 @@
 
 ## SUPPORT
 
-[<img width='45' height="45" align='left' alt='devRant.io' src="https://raw.githubusercontent.com/Meadowcottage/devRant.io/master/icon/favicon-512.png">](https://www.devrant.io/) Most of the support for this app must go to the devRant team and the work they put in to make the platform itself and continue to make it great for us developers. To support [Devrant.io](https://www.devrant.io/), who built the platform, feel free to check out their site for more details.
+[<img width='45' height="45" align='left' alt='devRant.io' src="https://raw.githubusercontent.com/Meadowcottage/devRant.io/master/build/icon-512.png">](https://www.devrant.io/) Most of the support for this app must go to the devRant team and the work they put in to make the platform itself and continue to make it great for us developers. To support [Devrant.io](https://www.devrant.io/), who built the platform, feel free to check out their site for more details.
 
 [<img width='45' height="45" align='left' alt='Github' src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">](https://github.com/Meadowcottage/Devrant.io) Feel free to help support this unofficial app by submitting issues or bugs so we can resolve and fox them or even feel free to submit pull requests if you have already helped develop a fix for one of the bugs in the app.
 
