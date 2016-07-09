@@ -11,8 +11,8 @@
 ## Screenshots
 
 <tr>
-    <td><img src="https://raw.githubusercontent.com/Meadowcottage/devRant.io/master/build/Screenshot-1.png"/></td>
-    <td><img src="https://raw.githubusercontent.com/Meadowcottage/devRant.io/master/build/Screenshot-2.png"/></td>
+    <td><img src="https://raw.githubusercontent.com/Meadowcottage/devRant.io/master/build/Screenshot-1.png" style="width: 250px;"/></td>
+    <td><img src="https://raw.githubusercontent.com/Meadowcottage/devRant.io/master/build/Screenshot-2.png" style="width: 250px;"/></td>
 </tr>
 
 ## Install
