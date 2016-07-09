@@ -1,7 +1,7 @@
 <h1 align="center">
   <a href="https://devrant.io"><img alt='devRant.io' width='256' height='256' src="https://raw.githubusercontent.com/Meadowcottage/devRant.io/master/build/icon-512.png"></a>
   <br>
-    devRant.io (UNOFFICIAL)
+    devRant (UNOFFICIAL)
   <br>
   <br>
 </h1>
@@ -10,7 +10,10 @@
 
 ## Screenshots
 
-<img src="http://i.imgur.com/bnaBWBE.png">
+<tr>
+    <td><img src="https://raw.githubusercontent.com/Meadowcottage/devRant.io/master/build/Screenshot-1.png"/></td>
+    <td><img src="https://raw.githubusercontent.com/Meadowcottage/devRant.io/master/build/Screenshot-2.png"/></td>
+</tr>
 
 ## Install
 
