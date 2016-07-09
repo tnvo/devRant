@@ -1,29 +1,28 @@
 <h1 align="center">
-  <a href="https://devrant.io"><img alt='devRant.io' width='256' height='256' src="https://raw.githubusercontent.com/Meadowcottage/devRant.io/master/build/icon-512.png"></a>
+  <a href="https://devrant.io"><img alt='devRant' width='256' height='256' src="https://raw.githubusercontent.com/Meadowcottage/devRant/master/build/icon-512.png"></a>
   <br>
     devRant (UNOFFICIAL)
   <br>
   <br>
 </h1>
 
-<h4 align="center">This is the unofficial <a href="https://www.devrant.io/">Devrant.io</a> web app. Built using the <a href="http://electron.atom.io/">Electron</a> framework to take the current live feed site and give it to you as a desktop app.</h4>
+<h4 align="center">This is the unofficial <a href="https://www.devrant.io/">Devrant</a> web app. Built using the <a href="http://electron.atom.io/">Electron</a> framework to take the current live feed site and give it to you as a desktop app.</h4>
 
 ## Screenshots
 
-<tr>
-    <td><img src="https://raw.githubusercontent.com/Meadowcottage/devRant.io/master/build/Screenshot-1.png" style="width: 250px;"/></td>
-    <td><img src="https://raw.githubusercontent.com/Meadowcottage/devRant.io/master/build/Screenshot-2.png" style="width: 250px;"/></td>
-</tr>
+<img src="https://raw.githubusercontent.com/Meadowcottage/devRant/master/build/Screenshot-1.png"/></td>
+
+<img src="https://raw.githubusercontent.com/Meadowcottage/devRant/master/build/Screenshot-2.png"/></td>
 
 ## Install
 
-[Download the lastest version](https://github.com/Meadowcottage/Devrant.io/releases).
+[Download the lastest version](https://github.com/Meadowcottage/Devrant/releases).
 
 ## SUPPORT
 
-[<img width='45' height="45" align='left' alt='devRant.io' src="https://raw.githubusercontent.com/Meadowcottage/devRant.io/master/build/icon-512.png">](https://www.devrant.io/) Most of the support for this app must go to the devRant team and the work they put in to make the platform itself and continue to make it great for us developers. To support [Devrant.io](https://www.devrant.io/), who built the platform, feel free to check out their site for more details.
+[<img width='45' height="45" align='left' alt='devRant' src="https://raw.githubusercontent.com/Meadowcottage/devRant/master/build/icon-512.png">](https://www.devrant.io/) Most of the support for this app must go to the devRant team and the work they put in to make the platform itself and continue to make it great for us developers. To support [Devrant](https://www.devrant.io/), who built the platform, feel free to check out their site for more details.
 
-[<img width='45' height="45" align='left' alt='Github' src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">](https://github.com/Meadowcottage/Devrant.io) Feel free to help support this unofficial app by submitting issues or bugs so we can resolve and fox them or even feel free to submit pull requests if you have already helped develop a fix for one of the bugs in the app.
+[<img width='45' height="45" align='left' alt='Github' src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">](https://github.com/Meadowcottage/Devrant) Feel free to help support this unofficial app by submitting issues or bugs so we can resolve and fox them or even feel free to submit pull requests if you have already helped develop a fix for one of the bugs in the app.
 
 [<img width='45' height="45" align='left' alt='Paypal' src="https://upload.wikimedia.org/wikipedia/commons/5/53/PayPal_2014_logo.svg">](https://paypal.me/meadowcottage) If you wish to support me, the author of the app, directly. Feel free to use the paypal.me link to donate.
 
