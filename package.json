@@ -12,6 +12,7 @@
     "app-category-type": "public.app-category.social",
     "productName": "devRant",
     "dmg": {
+      "background": "build/background.png",
       "contents": [
         {
           "x": 410,
@@ -27,7 +28,9 @@
       ]
     },
     "win": {
-      "remoteReleases": "https://github.com/meadowcottage/devrant"
+      "remoteReleases": "https://github.com/meadowcottage/devrant",
+      "loadingGif": "build/install-spinner.gif",
+      "msi": true
     }
   },
   "devDependencies": {
