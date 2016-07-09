@@ -1,8 +1,8 @@
 # TODO:
  - [ ] Switch 'Back' button to use webview.goBack() method rather than JS.
  - [ ] Add loading indicator.
- - [ ] Switch to using Electron Builder for packaging using [electron-builder](https://www.npmjs.com/package/electron-builder) or
- - [ ] Create installer/dmg versions. Either use electron-builder or [electron-installer-windows](https://www.npmjs.com/package/electron-installer-windows)/[electron-installer-dmg](https://www.npmjs.com/package/electron-installer-dmg)
+ - [x] Switch to using Electron Builder for packaging using [electron-builder](https://www.npmjs.com/package/electron-builder) or
+ - [x] Create installer/dmg versions. Either use electron-builder or [electron-installer-windows](https://www.npmjs.com/package/electron-installer-windows)/[electron-installer-dmg](https://www.npmjs.com/package/electron-installer-dmg)
  - [x] Keyboard Shortcuts for going back a page.
  - [x] MacOS build to use Electron `titleBarStyle: "hidden"`
  - [x] Add dark theme option to settings in menu.
