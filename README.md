@@ -8,6 +8,12 @@
 
 <h4 align="center">This is the unofficial <a href="https://www.devrant.io/">Devrant</a> web app. Built using the <a href="http://electron.atom.io/">Electron</a> framework to take the current live feed site and give it to you as a desktop app.</h4>
 
+<p align="center">
+  <a href="https://travis-ci.org/Meadowcottage/devRant"><img src="https://img.shields.io/travis/Meadowcottage/devRant/master.svg?style=flat-square" alt="Travis"></a>
+  <a href="https://github.com/Meadowcottage/devRant/releases"><img src="https://img.shields.io/github/release/Meadowcottage/devRant.svg?style=flat-square" alt="Release"></a>
+  <a href="https://github.com/Meadowcottage/devRant/releases"><img src="https://img.shields.io/github/downloads/meadowcottage/devrant/total.svg?style=flat-square" alt="Downloads"></a>
+</p>
+
 ## Screenshots
 
 <img src="https://raw.githubusercontent.com/Meadowcottage/devRant/master/build/Screenshot-1.png"/></td>
