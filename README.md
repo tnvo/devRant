@@ -16,9 +16,7 @@
 
 ## Screenshots
 
-<img src="https://raw.githubusercontent.com/Meadowcottage/devRant/master/build/Screenshot-1.png"/></td>
-
-<img src="https://raw.githubusercontent.com/Meadowcottage/devRant/master/build/Screenshot-2.png"/></td>
+<img src="https://raw.githubusercontent.com/Meadowcottage/devRant/master/build/Screenshot.png"/>
 
 ## Install
 
