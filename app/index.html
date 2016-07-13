@@ -23,9 +23,6 @@
         //Constant variable made from 'webview' ID
         const webview = document.getElementById('webview');
 
-        //Dark Theme Toggle
-        var isDarkTheme;
-
         // DOM ready executing scripts after the webview has loaded
         webview.addEventListener('dom-ready', function() {
 
@@ -36,20 +33,18 @@
                 this.insertCSS('.addrant-btn, .addcomment-btn{bottom: 20px!important;}');
             }
 
-            //TopBar Dark Color | Remove Mobile Banner | Remove Scroll Bars | Menu Button Icons | Profile-page Back Button Styling
+            //TopBar Dark Color | Remove Mobile Banner | Remove Scroll Bars | Menu Button Ic0ons | Profile-page Back Button Styling
             this.insertCSS('.rant-top-bar{background-color: #40415a!important;} .mobile-install-banner{display:none!important;} .bar-btm-guy{display:none!important;} ::-webkit-scrollbar{display: none!important;} div.body-col2.profile-page > .rant-top-bar a {float: right!important; text-align: right!important; margin-right: 20px!important; height: 44px!important; font-size: 30px!important; margin-left: 10px!important; display: inline-block!important;}}');
 
-            if (isDarkTheme == true) {
-              console.log("Enabling Dark Theme.");
-              this.insertCSS('body, .rantlist li, .profile-details, .profile-tabs, .rantlist-tags a, .rantlist-tags a, .search-base-list a{background-color: #414159!important;} .rant-top-bar, .tab-line, .reply-bar{background-color: #545571!important;} .rantlist li, .search-base-list a{border-top: 2px solid #54556E!important;} .profile-tabs{border-bottom: 2px solid #54556E!important;} div.username-row > a.username-details, .rantlist-title, .profile-detail-col2, .tabs, .profile-detail-col2 > a, .search-popular{color: #E0E0E0!important;} .rantlist-tags a{border: 2px solid #54556E!important;}');
-            }
-
-            //Extenal Links Open in New Window | Adds Mobile Download Buttons to Menu | Adds Back Button
+            //Extenal Links Open in New Window | Adds Mobile Download Buttons to Menu | Adds Back Button | Toggle Theme
             this.executeJavaScript("$('a').not('[href*=\"mailto:\"]').each(function (){var isInternalLink = new RegExp('/' + window.location.host + '/');if ( ! isInternalLink.test(this.href) ) {$(this).attr('target', '_blank');}});");
             this.executeJavaScript("$('<li><a target=\"_blank\" href=\"https://play.google.com/store/apps/details?id=com.hexicallabs.devrant\"><span class=\"icon-andriod-logo1 icon\"></span>Download for Android</a></li>').insertAfter('div.menu-modal > ul > li:nth-child(4)')");
             this.executeJavaScript("$('<li><a target=\"_blank\" href=\"https://itunes.apple.com/us/app/apple-store/id1067512973?pt=117770459&ct=web_landing&mt=8\"><span class=\"icon-apple-logo1 icon\"></span>Download for iOS</a></li>').insertAfter('div.menu-modal > ul > li:nth-child(4)')");
             this.executeJavaScript("$('.feed-top-icons:nth-child(2), .rant-top-bar > .share-icons, div.body-col2.profile-page > .rant-top-bar').prepend('<a href=\"javascript: history.back();\" title=\"Back\" alt=\"Back\"><span class=\"icon-back2 icon\"></span></a>')");
-            this.executeJavaScript("$('<li class=\"menu-option-toggle-theme\"><a href=\"#\">Toggle Theme</a></li>').prependTo('div.settings-modal.modal-base > ul')");
+            this.executeJavaScript("function addDarkTheme(){$('head').prepend('<style id=\"dark-theme\">body, .rantlist li, .profile-details, .profile-tabs, .rantlist-tags a, .rantlist-tags a, .search-base-list a{background-color: #414159!important;} .rant-top-bar, .tab-line, .reply-bar{background-color: #545571!important;} .rantlist li, .search-base-list a{border-top: 2px solid #54556E!important;} .profile-tabs{border-bottom: 2px solid #54556E!important;} div.username-row > a.username-details, .rantlist-title, .profile-detail-col2, .tabs, .profile-detail-col2 > a, .search-popular{color: #E0E0E0!important;} .rantlist-tags a{border: 2px solid #54556E!important;}</style>');}");
+            this.executeJavaScript("function removeDarkTheme(){$('head > #dark-theme').remove();}");
+            this.executeJavaScript("$('<li><a href=\"#\" onClick=\"removeDarkTheme()\">Light Theme</a></li>').prependTo('div.settings-modal.modal-base > ul')");
+            this.executeJavaScript("$('<li><a href=\"#\" onClick=\"addDarkTheme()\">Dark Theme</a></li>').prependTo('div.settings-modal.modal-base > ul')");
         });
 
         // Webview links that try to open in new window will open in default browser
