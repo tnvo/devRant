@@ -22,7 +22,7 @@
 
 ## Install
 
-[Download the lastest version](https://github.com/Meadowcottage/Devrant/releases) or install on OS X via homebrew's caskroom using `brew cask install devrantio`.
+[Download the lastest version](https://github.com/Meadowcottage/Devrant/releases) or install on OS X via homebrew using `brew cask install devrant`.
 
 ## SUPPORT
 
