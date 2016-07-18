@@ -26,13 +26,12 @@
 
         // DOM ready executing scripts after the webview has loaded
         webview.addEventListener('dom-ready', function() {
-
             // If OS is Darwn(MacOS)
             if (process.platform == 'darwin') {
-                this.insertCSS('.addrant-btn, .addcomment-btn{bottom: 20px!important;}');
-                document.getElementById('macOS-style').style.paddingTop = "24px";
+              this.insertCSS('.addrant-btn, .addcomment-btn{bottom: 20px!important;}');
+              document.getElementById('macOS-style').style.paddingTop = "24px";
             } else {
-                this.insertCSS('.addrant-btn, .addcomment-btn{bottom: 20px!important;}');
+              this.insertCSS('.addrant-btn, .addcomment-btn{bottom: 20px!important;}');
             }
 
             //TopBar Dark Color | Remove Mobile Banner | Remove Scroll Bars | Menu Button Ic0ons | Profile-page Back Button Styling
