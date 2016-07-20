@@ -16,7 +16,7 @@
         }
 
         ::-webkit-scrollbar {
-          display: none!important;
+            display: none!important;
         }
     </style>
 </head>
@@ -32,10 +32,10 @@
         webview.addEventListener('dom-ready', function() {
             // If OS is Darwn(MacOS)
             if (process.platform == 'darwin') {
-              this.insertCSS('.addrant-btn, .addcomment-btn{bottom: 44px!important;}');
-              document.getElementById('macOS-style').style.paddingTop = "24px";
+                this.insertCSS('.addrant-btn, .addcomment-btn{bottom: 44px!important;}');
+                document.getElementById('macOS-style').style.paddingTop = "24px";
             } else {
-              this.insertCSS('.addrant-btn, .addcomment-btn{bottom: 20px!important;}');
+                this.insertCSS('.addrant-btn, .addcomment-btn{bottom: 20px!important;}');
             }
 
             //TopBar Dark Color | Remove Mobile Banner | Remove Scroll Bars | Menu Button Ic0ons | Profile-page Back Button Styling
