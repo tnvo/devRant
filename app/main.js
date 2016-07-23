@@ -5,7 +5,7 @@ const electron = require('electron');
 const app = electron.app;
 const app_name = 'devRant';
 const app_title = 'devRant // new Rant("fml");';
-const app_version = '1.0.3';
+const app_version = '1.0.4';
 const app_description = 'The unofficial electron app for devRant';
 const app_menu = electron.Menu;
 

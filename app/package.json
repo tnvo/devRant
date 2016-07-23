@@ -1,7 +1,7 @@
 {
    "name":"devRant",
    "productName":"devRant",
-   "version":"1.0.3",
+   "version":"1.0.4",
    "description":"The unofficial electron app for devRant",
    "private":true,
    "main":"main.js",
