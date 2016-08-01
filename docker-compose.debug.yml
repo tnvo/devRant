@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  devrant:
+    image: devrant:debug
+    build:
+      context: .
+      dockerfile: Dockerfile.debug
+    ports:
+      - "5858:5858"
+    volumes:
+      - .:/src
+    environment:
+      - REMOTE_DEBUGGING

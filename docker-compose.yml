@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  devrant:
+    image: devrant
+    build:
+      context: .
+      dockerfile: Dockerfile
