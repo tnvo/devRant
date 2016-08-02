@@ -12,6 +12,9 @@ const app_menu = electron.Menu;
 // App Window
 const BrowserWindow = electron.BrowserWindow;
 
+//Update Downloader
+require('electron-dl')();
+
 //General Menu Contents
 const menu_content = [{
     label: 'Edit',
