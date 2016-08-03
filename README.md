@@ -21,6 +21,14 @@
 
 [Download the lastest version](https://github.com/Meadowcottage/Devrant/releases) or install on OS X via [homebrew](http://brew.sh) using `brew cask install devrant`.
 
+## Development
+
+- Clone: `$ git clone https://github.com/Meadowcottage/devRant.git`
+- Install NPM: `$ npm install`
+- (OPTIONAL)Live reload: `$ npm run reload`
+- Start Preview: `$ npm start`
+- Build: `$ npm run dist`
+
 ## SUPPORT
 
 [<img width='45' height="45" align='left' alt='devRant' src="https://raw.githubusercontent.com/Meadowcottage/devRant/master/build/icon-512.png">](https://www.devrant.io/) Most of the support for this app must go to the devRant team and the work they put in to make the platform itself and continue to make it great for us developers. To support [Devrant](https://www.devrant.io/), who built the platform, feel free to check out their site for more details.
