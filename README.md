@@ -9,6 +9,7 @@
 
 <p align="center">
   <a href="https://travis-ci.org/Meadowcottage/devRant"><img src="https://img.shields.io/travis/Meadowcottage/devRant/master.svg?style=flat-square" alt="Travis"></a>
+  <a href="https://ci.appveyor.com/project/Meadowcottage/devrant"><img src="https://ci.appveyor.com/api/projects/status/wgq4fuwk2qsge06w?style=flat-square" alt="Appveyor"></a>
   <a href="https://github.com/Meadowcottage/devRant/releases"><img src="https://img.shields.io/github/release/Meadowcottage/devRant.svg?style=flat-square" alt="Release"></a>
   <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=bendixon50%40gmail%2ecom&item_name=Tip%20for%20Meadowcottage&currency_code=GBP"><img src="https://img.shields.io/badge/Donate-PayPal-green.svg?style=flat-square" alt="Paypal"></a>
   <a href="https://github.com/Meadowcottage/devRant/releases"><img src="https://img.shields.io/github/downloads/meadowcottage/devrant/total.svg?style=flat-square" alt="Downloads"></a>
