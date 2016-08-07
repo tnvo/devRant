@@ -49,19 +49,19 @@ var template = [{
 }, {
     label: 'View',
     submenu: [
-        //{ label: 'Forward', accelerator: 'Control+Right', click: function(item,focusedWindow) {if (focusedWindow) focusedWindow.webContents.goForward();} },
         {
             label: 'Back',
-            accelerator: 'Control+Left',
+            accelerator: 'Backspace',
             click: function(item, focusedWindow) {
-                if (focusedWindow) focusedWindow.webContents.goBack();
-                focusedWindow.webContents.reload()
+                if (focusedWindow && focusedWindow.webContents.canGoBack())
+                focusedWindow.webContents.goBack();
+                focusedWindow.webContents.reload();
             }
         }, {
             type: 'separator'
         }, {
             label: 'Reload',
-            accelerator: 'Control+R',
+            accelerator: 'F5',
             click: function(item, focusedWindow) {
                 if (focusedWindow) focusedWindow.webContents.reload();
             }

@@ -1,5 +1,6 @@
 //Electron
 const electron = require('electron');
+const globalShortcut = electron.globalShortcut;
 const browserWindow = electron.BrowserWindow;
 const menu = electron.Menu;
 
@@ -42,6 +43,22 @@ app.on('ready', function createWindow() {
   mainWindow.loadURL('file://' + __dirname + '/index.html')
   mainWindow.on('closed', function() {
     mainWindow = null
+  })
+
+  //Shortcut
+  globalShortcut.register('Control+R', () => {
+    mainWindow.webContents.reload();
+  })
+  globalShortcut.register('CmdOrCtrl+Left', () => {
+    mainWindow.webContents.goBack();
+    mainWindow.webContents.reload();
+  })
+
+  mainWindow.on('app-command', (e, cmd) => {
+    // Navigate the window back when the user hits their mouse back button
+    if (cmd === 'browser-backward' && mainWindow.webContents.canGoBack()) {
+      mainWindow.webContents.goBack()
+    }
   })
 })
 app.on('window-all-closed', function() {
