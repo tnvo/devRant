@@ -10,9 +10,6 @@ const app_title = 'devRant // new Rant("fml");';
 const app_version = '1.0.4';
 const app_description = 'The unofficial electron app for devRant';
 
-//Update Downloader
-require('electron-dl')();
-
 // Main App Window
 let mainWindow
 
