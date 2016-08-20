@@ -53,25 +53,23 @@ var template_win = [{
     }]
 }, {
     label: 'View',
-    submenu: [
-        {
-            label: 'Back',
-            accelerator: 'Backspace',
-            click: function(item, focusedWindow) {
-                if (focusedWindow && focusedWindow.webContents.canGoBack())
+    submenu: [{
+        label: 'Back',
+        accelerator: 'Backspace',
+        click: function(item, focusedWindow) {
+            if (focusedWindow && focusedWindow.webContents.canGoBack())
                 focusedWindow.webContents.goBack();
-                focusedWindow.webContents.reload();
-            }
-        }, {
-            type: 'separator'
-        }, {
-            label: 'Reload',
-            accelerator: 'F5',
-            click: function(item, focusedWindow) {
-                if (focusedWindow) focusedWindow.webContents.reload();
-            }
+            focusedWindow.webContents.reload();
         }
-    ]
+    }, {
+        type: 'separator'
+    }, {
+        label: 'Reload',
+        accelerator: 'F5',
+        click: function(item, focusedWindow) {
+            if (focusedWindow) focusedWindow.webContents.reload();
+        }
+    }]
 }, {
     label: 'Window',
     role: 'window',
@@ -212,7 +210,7 @@ var template_osx = [{
 }];
 
 if (process.platform == 'darwin') {
-  module.exports = app_menu.buildFromTemplate(template_osx)
+    module.exports = app_menu.buildFromTemplate(template_osx)
 } else {
-  module.exports = app_menu.buildFromTemplate(template_win)
+    module.exports = app_menu.buildFromTemplate(template_win)
 }
