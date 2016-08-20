@@ -1,6 +1,6 @@
 var Application = require('spectron').Application
 var assert = require('assert')
-var electron = require('electron-prebuilt')
+var electron = require('electron')
 
 var app = new Application({
   path: electron,
