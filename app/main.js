@@ -6,29 +6,18 @@ const menu = electron.Menu;
 
 //App Info
 const app = electron.app;
-const app_name = 'devRant';
-const app_title = 'devRant // new Rant("fml");';
-const app_version = '1.0.4';
+const app_name = app.getName();
+const app_title = app.getName() + ' // new Rant("fml");';
+const app_version = app.getVersion();
 const app_description = 'The unofficial electron app for devRant';
 
 // Main App Window
 let mainWindow
 
-// Chooses titleBarStyle based on OS
-var app_titleBarStyle;
-
 app.on('ready', function createWindow() {
-  // If OS is Darwin(MacOS)
-  if (process.platform == 'darwin') {
-    app_titleBarStyle = 'hidden-inset';
-    menu.setApplicationMenu(require('./lib/menu_osx.js'));
-  } else {
-    app_titleBarStyle = 'default';
-    menu.setApplicationMenu(require('./lib/menu_win.js'));
-  }
   mainWindow = new browserWindow({
   title: app_title,
-  titleBarStyle: app_titleBarStyle,
+  titleBarStyle: 'hidden-inset',
   backgroundColor: '#40415a',
   movable: true,
   width: 450,
@@ -40,6 +29,7 @@ app.on('ready', function createWindow() {
   resizable: true,
   autoHideMenuBar: true
   })
+  menu.setApplicationMenu(require('./menu.js'));
   mainWindow.loadURL('file://' + __dirname + '/index.html')
   mainWindow.on('closed', function() {
     mainWindow = null
