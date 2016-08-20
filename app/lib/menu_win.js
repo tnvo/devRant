@@ -1,4 +1,9 @@
-var Menu = require('electron').Menu
+// Electron
+const electron = require('electron');
+const app = electron.app;
+const app_name = app.getName();
+const app_version = app.getVersion();
+const app_menu = electron.Menu;
 
 var template = [{
     label: 'File',
@@ -102,4 +107,4 @@ var template = [{
     }]
 }];
 
-module.exports = Menu.buildFromTemplate(template)
+module.exports = app_menu.buildFromTemplate(template)
