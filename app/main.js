@@ -63,7 +63,7 @@ app.on('ready', function createWindow() {
 
               // MacOS Button Offset & Navbar Padding
               if (process.platform == 'darwin') {
-                app_page.insertCSS('.addrant-btn, .addcomment-btn{bottom: 44px!important;} .rant-top-bar { padding-top: 20px!important; }');
+                app_page.insertCSS('.addrant-btn, .addcomment-btn{bottom: 44px!important;} .rant-top-bar { padding-top: 24px!important; -webkit-app-region: drag!important; } .rantlist-bg { margin-top: 24px!important; } .profile-details { margin-top: 74px!important; } .profile-tabs { margin-bottom: -24px!important; }');
               } else {
                 app_page.insertCSS('.addrant-btn, .addcomment-btn{bottom: 20px!important;}');
               }
