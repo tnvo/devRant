@@ -23,6 +23,9 @@ require('electron-dl')();
 // Main App Window
 let mainWindow
 
+// If the application is quitting
+let isQuitting = false;
+
 // Main Window
 function createMainWindow() {
     const lastWindowState = app_config.get('lastWindowState');
@@ -49,76 +52,94 @@ function createMainWindow() {
         }
     });
     app_view.loadURL('https://devrant.io/feed');
+
+    // When window is closed, hide window
+    app_view.on('close', e => {
+        if (!isQuitting) {
+            e.preventDefault();
+            if (process.platform === 'darwin') {
+                app.hide();
+            } else {
+                app_view.hide();
+            }
+        }
+
+    });
     return app_view;
 }
 
-app.on('ready', function createWindow() {
+app.on('ready', () => {
     mainWindow = createMainWindow();
     menu.setApplicationMenu(require('./menu'))
-    if (app_is_dev) { mainWindow.openDevTools() }
+    if (app_is_dev) {
+        mainWindow.openDevTools()
+    }
 
     const app_page = mainWindow.webContents;
 
     app_page.on('dom-ready', () => {
 
-              // Stock style additions
-              app_page.insertCSS(fs.readFileSync(path.join(__dirname, 'styles/app.css'), 'utf8'));
+        // Stock style additions
+        app_page.insertCSS(fs.readFileSync(path.join(__dirname, 'styles/app.css'), 'utf8'));
 
-              // MacOS Button Offset & Navbar Padding
-              if (process.platform == 'darwin') {
-                app_page.insertCSS('.addrant-btn, .addcomment-btn{bottom: 44px!important;} .rant-top-bar { padding-top: 20px!important; }');
-              } else {
-                app_page.insertCSS('.addrant-btn, .addcomment-btn{bottom: 20px!important;}');
-              }
+        // MacOS Button Offset & Navbar Padding
+        if (process.platform == 'darwin') {
+            app_page.insertCSS('.addrant-btn, .addcomment-btn{bottom: 44px!important;} .rant-top-bar { padding-top: 24px!important; -webkit-app-region: drag!important; } .rantlist-bg { margin-top: 24px!important; } .profile-details { margin-top: 74px!important; } .profile-tabs { margin-bottom: -24px!important; }');
+        } else {
+            app_page.insertCSS('.addrant-btn, .addcomment-btn{bottom: 20px!important;}');
+        }
 
-              //Extenal Links Open in New Window
-              app_page.executeJavaScript("$('a').not('[href*=\"mailto:\"]').each(function (){var isInternalLink = new RegExp('/' + window.location.host + '/');if ( ! isInternalLink.test(this.href) ) {$(this).attr('target', '_blank');}});");
+        //Extenal Links Open in New Window
+        app_page.executeJavaScript("$('a').not('[href*=\"mailto:\"]').each(function (){var isInternalLink = new RegExp('/' + window.location.host + '/');if ( ! isInternalLink.test(this.href) ) {$(this).attr('target', '_blank');}});");
 
-              // Adds Download Button to Menu
-              app_page.executeJavaScript("$('<li><a target=\"_blank\" href=\"https://www.devrant.io/\"><span class=\"icon-about2 icon\"></span>Downloads</a></li>').insertAfter('div.menu-modal > ul > li:nth-child(5)')");
+        // Adds Download Button to Menu
+        app_page.executeJavaScript("$('<li><a target=\"_blank\" href=\"https://www.devrant.io/\"><span class=\"icon-about2 icon\"></span>Downloads</a></li>').insertAfter('div.menu-modal > ul > li:nth-child(5)')");
 
-              // Adds Feedback Button to Menu
-              app_page.executeJavaScript("$('<li><a target=\"_blank\" href=\"mailto:info@devrant.io\"><span class=\"icon-feedback2 icon\"></span>Feedback</a></li>').insertAfter('div.menu-modal > ul > li:nth-child(5)')");
+        // Adds Feedback Button to Menu
+        app_page.executeJavaScript("$('<li><a target=\"_blank\" href=\"mailto:info@devrant.io\"><span class=\"icon-feedback2 icon\"></span>Feedback</a></li>').insertAfter('div.menu-modal > ul > li:nth-child(5)')");
 
-              //Adds Back Button
-              app_page.executeJavaScript("$('.feed-top-icons:nth-child(2), .rant-top-bar > .share-icons, div.body-col2.profile-page > .rant-top-bar').prepend('<a href=\"javascript: history.back();\" title=\"Back\" alt=\"Back\"><span class=\"icon-back2 icon\"></span></a>')");
+        //Adds Back Button
+        app_page.executeJavaScript("$('.feed-top-icons:nth-child(2), .rant-top-bar > .share-icons, div.body-col2.profile-page > .rant-top-bar').prepend('<a href=\"javascript: history.back();\" title=\"Back\" alt=\"Back\"><span class=\"icon-back2 icon\"></span></a>')");
 
-              // Toggle Theme
-              app_page.executeJavaScript("function addDarkTheme(){$('head').prepend('<style id=\"dark-theme\">body, .rantlist li, .profile-details, .profile-tabs, .rantlist-tags a, .rantlist-tags a, .search-base-list a{background-color: #414159!important;} .rant-top-bar, .tab-line, .reply-bar{background-color: #545571!important;} .rantlist li, .search-base-list a{border-top: 2px solid #54556E!important;} .profile-tabs{border-bottom: 2px solid #54556E!important;} div.username-row > a.username-details, .rantlist-title, .profile-detail-col2, .tabs, .profile-detail-col2 > a, .search-popular{color: #E0E0E0!important;} .rantlist-tags a{border: 2px solid #54556E!important;}</style>');}");
-              app_page.executeJavaScript("function removeDarkTheme(){$('head > #dark-theme').remove();}");
-              app_page.executeJavaScript("$('<li><a href=\"#\" onClick=\"addDarkTheme()\">Dark Theme</a></li>').prependTo('div.settings-modal.modal-base > ul')");
-              app_page.executeJavaScript("$('<li><a href=\"#\" onClick=\"removeDarkTheme()\">Light Theme</a></li>').prependTo('div.settings-modal.modal-base > ul')");
+        // Toggle Theme
+        app_page.executeJavaScript("function addDarkTheme(){$('head').prepend('<style id=\"dark-theme\">body, .rantlist li, .profile-details, .profile-tabs, .rantlist-tags a, .rantlist-tags a, .search-base-list a{background-color: #414159!important;} .rant-top-bar, .tab-line, .reply-bar{background-color: #545571!important;} .rantlist li, .search-base-list a{border-top: 2px solid #54556E!important;} .profile-tabs{border-bottom: 2px solid #54556E!important;} div.username-row > a.username-details, .rantlist-title, .profile-detail-col2, .tabs, .profile-detail-col2 > a, .search-popular{color: #E0E0E0!important;} .rantlist-tags a{border: 2px solid #54556E!important;}</style>');}");
+        app_page.executeJavaScript("function removeDarkTheme(){$('head > #dark-theme').remove();}");
+        app_page.executeJavaScript("$('<li><a href=\"#\" onClick=\"addDarkTheme()\">Dark Theme</a></li>').prependTo('div.settings-modal.modal-base > ul')");
+        app_page.executeJavaScript("$('<li><a href=\"#\" onClick=\"removeDarkTheme()\">Light Theme</a></li>').prependTo('div.settings-modal.modal-base > ul')");
 
-              mainWindow.show();
+        mainWindow.show();
 
-              //Open external links in browser
-              app_page.on('new-window', (e, url) => {
-                  e.preventDefault();
-                  electron.shell.openExternal(url);
-              })
+        //Open external links in browser
+        app_page.on('new-window', (e, url) => {
+            e.preventDefault();
+            electron.shell.openExternal(url);
+        })
 
-              //Shortcut to reload the page.
-              globalShortcut.register('CmdOrCtrl+R', () => {
-                  mainWindow.webContents.reload();
-              })
-              globalShortcut.register('CmdOrCtrl+Left', () => {
-                  mainWindow.webContents.goBack();
-                  mainWindow.webContents.reload();
-              })
+        //Shortcut to reload the page.
+        globalShortcut.register('CmdOrCtrl+R', () => {
+            mainWindow.webContents.reload();
+        })
+        globalShortcut.register('CmdOrCtrl+Left', () => {
+            mainWindow.webContents.goBack();
+            mainWindow.webContents.reload();
+        })
 
-              mainWindow.on('app-command', (e, cmd) => {
-                  // Navigate the window back when the user hits their mouse back button
-                  if (cmd === 'browser-backward' && mainWindow.webContents.canGoBack()) {
-                      mainWindow.webContents.goBack()
-                  }
-              })
+        mainWindow.on('app-command', (e, cmd) => {
+            // Navigate the window back when the user hits their mouse back button
+            if (cmd === 'browser-backward' && mainWindow.webContents.canGoBack()) {
+                mainWindow.webContents.goBack()
+            }
+        })
     })
 })
-app.on('window-all-closed', function() {
+app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
         app.quit()
     }
 })
-app.on('activate', function() {
-    mainWindow.show();
+app.on('activate', () => {
+    mainWindow.show()
 })
+app.on('before-quit', () => {
+	isQuitting = true;
+});
