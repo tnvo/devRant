@@ -27,7 +27,6 @@
 
 - Clone: `$ git clone https://github.com/Meadowcottage/devRant.git`
 - Install NPM: `$ npm install`
-- (OPTIONAL)Live reload: `$ npm run reload`
 - Start Preview: `$ npm start`
 - Build: `$ npm run dist`
 
