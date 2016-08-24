@@ -1,5 +1,6 @@
-// Electron
+//Electron
 const electron = require('electron');
+const BrowserWindow = electron.BrowserWindow;
 const app = electron.app;
 const app_name = app.getName();
 const app_version = app.getVersion();
@@ -8,7 +9,7 @@ const app_menu = electron.Menu;
 var template_win = [{
     label: 'File',
     submenu: [{
-        label: 'Hide devRant',
+        label: 'Hide ' + app_name,
         accelerator: 'Control+H',
         role: 'hide'
     }, {
@@ -69,7 +70,14 @@ var template_win = [{
         click: function(item, focusedWindow) {
             if (focusedWindow) focusedWindow.webContents.reload();
         }
-    }]
+    },{
+        label: 'Toggle Theme',
+        accelerator: 'Control+D',
+        click() {
+            // Some code goes here.
+        }
+    }
+  ]
 }, {
     label: 'Window',
     role: 'window',
@@ -86,12 +94,12 @@ var template_win = [{
     label: 'Help',
     role: 'help',
     submenu: [{
-        label: 'About devRant',
+        label: 'About ' + app_name,
         click: function() {
             require('electron').shell.openExternal("https://github.com/Meadowcottage/devRant/releases/tag/" + app_version)
         }
     }, {
-        label: 'View devRant',
+        label: 'View ' + app_name,
         click: function() {
             require('electron').shell.openExternal("https://devrant.io")
         }
@@ -108,7 +116,7 @@ var template_win = [{
 var template_osx = [{
     label: 'Application',
     submenu: [{
-        label: 'Hide devRant',
+        label: 'Hide ' + app_name,
         accelerator: 'Command+H',
         role: 'hide'
     }, {
@@ -128,29 +136,29 @@ var template_osx = [{
     label: 'Edit',
     submenu: [{
         label: 'Undo',
-        accelerator: 'CommandOrControl+Z',
+        accelerator: 'Command+Z',
         role: 'undo'
     }, {
         label: 'Redo',
-        accelerator: 'Shift+CommandOrControl+Z',
+        accelerator: 'Shift+Command+Z',
         role: 'redo'
     }, {
         type: 'separator'
     }, {
         label: 'Cut',
-        accelerator: 'CommandOrControl+X',
+        accelerator: 'Command+X',
         role: 'cut'
     }, {
         label: 'Copy',
-        accelerator: 'CommandOrControl+C',
+        accelerator: 'Command+C',
         role: 'copy'
     }, {
         label: 'Paste',
-        accelerator: 'CommandOrControl+V',
+        accelerator: 'Command+V',
         role: 'paste'
     }, {
         label: 'Select All',
-        accelerator: 'CommandOrControl+A',
+        accelerator: 'Command+A',
         role: 'selectall'
     }]
 }, {
@@ -159,7 +167,7 @@ var template_osx = [{
         //{ label: 'Forward', accelerator: 'CommandOrControl+Right', click: function(item,focusedWindow) {if (focusedWindow) focusedWindow.webContents.goForward(; focusedWindow.webContents.reload();} },
         {
             label: 'Back',
-            accelerator: 'CommandOrControl+Left',
+            accelerator: 'Command+Left',
             click: function(item, focusedWindow) {
                 if (focusedWindow) focusedWindow.webContents.goBack();
                 focusedWindow.webContents.reload();
@@ -168,9 +176,15 @@ var template_osx = [{
             type: 'separator'
         }, {
             label: 'Reload',
-            accelerator: 'CommandOrControl+R',
+            accelerator: 'Command+R',
             click: function(item, focusedWindow) {
                 if (focusedWindow) focusedWindow.webContents.reload();
+            }
+        }, {
+            label: 'Toggle Theme',
+            accelerator: 'Command+D',
+            click() {
+                // Some code goes here.
             }
         }
     ]
@@ -179,23 +193,23 @@ var template_osx = [{
     role: 'window',
     submenu: [{
         label: 'Minimize',
-        accelerator: 'CommandOrControl+M',
+        accelerator: 'Command+M',
         role: 'minimize'
     }, {
         label: 'Close',
-        accelerator: 'CommandOrControl+W',
+        accelerator: 'Command+W',
         role: 'close'
     }]
 }, {
     label: 'Help',
     role: 'help',
     submenu: [{
-        label: 'About devRant',
+        label: 'About ' + app_name,
         click: function() {
             require('electron').shell.openExternal("https://github.com/Meadowcottage/devRant/releases/tag/" + app_version)
         }
     }, {
-        label: 'View devRant',
+        label: 'View ' + app_name,
         click: function() {
             require('electron').shell.openExternal("https://devrant.io")
         }
