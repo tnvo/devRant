@@ -1,0 +1,37 @@
+body,
+.rantlist li,
+.profile-details,
+.profile-tabs,
+.rantlist-tags a,
+.search-base-list a,
+.notif-list a {
+  background-color: #414159!important;
+}
+.rant-top-bar,
+.tab-line,
+.reply-bar {
+  background-color: #545571!important;
+}
+.rantlist-vote-col.vote-state-novote .btn-vote-circle {
+  background-color: #aaaab8;
+}
+.rantlist li,
+.search-base-list a ,
+.notif-list li {
+  border-top: 2px solid #54556E!important;
+}
+.profile-tabs {
+  border-bottom: 2px solid #54556E!important;
+}
+div.username-row > a.username-details,
+.rantlist-title,
+.profile-detail-col2,
+.tabs,
+.profile-detail-col2 > a,
+.search-popular,
+.notif-body {
+  color: #E0E0E0!important;
+}
+.rantlist-tags a {
+  border: 2px solid #54556E!important;
+}

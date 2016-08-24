@@ -85,11 +85,14 @@ app.on('ready', () => {
         // Stock style additions
         app_page.insertCSS(fs.readFileSync(path.join(__dirname, 'styles/app.css'), 'utf8'));
 
+        // Dark theme
+        app_page.insertCSS(fs.readFileSync(path.join(__dirname, 'styles/app-dark.css'), 'utf8'));
+
         // MacOS Button Offset & Navbar Padding
         if (process.platform == 'darwin') {
-            app_page.insertCSS('.addrant-btn, .addcomment-btn{bottom: 44px!important;} .rant-top-bar { padding-top: 24px!important; -webkit-app-region: drag!important; } .rantlist-bg { margin-top: 24px!important; } .profile-details { margin-top: 74px!important; } .profile-tabs { margin-bottom: -24px!important; }');
+            app_page.insertCSS('.rant-top-bar { padding-top: 24px!important; -webkit-app-region: drag!important; } .rantlist-bg { margin-top: 24px!important; } .profile-details { margin-top: 74px!important; } .profile-tabs { margin-bottom: -24px!important; }');
         } else {
-            app_page.insertCSS('.addrant-btn, .addcomment-btn{bottom: 20px!important;}');
+            app_page.insertCSS('.addrant-btn, .addcomment-btn { bottom: 20px!important; }');
         }
 
         //Extenal Links Open in New Window
@@ -103,12 +106,6 @@ app.on('ready', () => {
 
         //Adds Back Button
         app_page.executeJavaScript("$('.feed-top-icons:nth-child(2), .rant-top-bar > .share-icons, div.body-col2.profile-page > .rant-top-bar').prepend('<a href=\"javascript: history.back();\" title=\"Back\" alt=\"Back\"><span class=\"icon-back2 icon\"></span></a>')");
-
-        // Toggle Theme
-        app_page.executeJavaScript("function addDarkTheme(){$('head').prepend('<style id=\"dark-theme\">body, .rantlist li, .profile-details, .profile-tabs, .rantlist-tags a, .rantlist-tags a, .search-base-list a{background-color: #414159!important;} .rant-top-bar, .tab-line, .reply-bar{background-color: #545571!important;} .rantlist li, .search-base-list a{border-top: 2px solid #54556E!important;} .profile-tabs{border-bottom: 2px solid #54556E!important;} div.username-row > a.username-details, .rantlist-title, .profile-detail-col2, .tabs, .profile-detail-col2 > a, .search-popular{color: #E0E0E0!important;} .rantlist-tags a{border: 2px solid #54556E!important;}</style>');}");
-        app_page.executeJavaScript("function removeDarkTheme(){$('head > #dark-theme').remove();}");
-        app_page.executeJavaScript("$('<li><a href=\"#\" onClick=\"addDarkTheme()\">Dark Theme</a></li>').prependTo('div.settings-modal.modal-base > ul')");
-        app_page.executeJavaScript("$('<li><a href=\"#\" onClick=\"removeDarkTheme()\">Light Theme</a></li>').prependTo('div.settings-modal.modal-base > ul')");
 
         mainWindow.show();
 
