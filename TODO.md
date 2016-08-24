@@ -7,7 +7,7 @@
  - [x] Add feedback button to menu.
  - [ ] Add app info to bottom of menu screen.
  - [ ] Add auto-updater system. [electron-updater](https://www.npmjs.com/package/electron-updater) & [electron-gh-releases](https://www.npmjs.com/package/electron-gh-releases)
- - [ ] Add context menu shortcuts (EG: Right click to copy link to rant or save image/gif) [electron-context-menu](https://www.npmjs.com/package/electron-context-menu).
+ - [x] Add context menu shortcuts (EG: Right click to copy link to rant or save image/gif) [electron-context-menu](https://www.npmjs.com/package/electron-context-menu).
  - [x] Add Simplified downloads [electron-dl](https://www.npmjs.com/package/electron-dl).
  - [x] Free Stickers menu "Learn more" button open in default browser rather than in app.
 

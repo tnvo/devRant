@@ -17,8 +17,11 @@ const app_is_dev = require('electron-is-dev');
 const path = require('path');
 const fs = require('fs');
 
-//Electron DL
+// Electron DL
 require('electron-dl')();
+
+// Right Click/Context menu contents
+require('electron-context-menu')();
 
 // Main App Window
 let mainWindow
