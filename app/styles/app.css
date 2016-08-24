@@ -19,3 +19,7 @@ div.body-col2.profile-page > .rant-top-bar a {
     margin-left: 10px!important;
     display: inline-block!important;
 }
+.addrant-btn,
+.addcomment-btn {
+  bottom: 20px!important;
+}

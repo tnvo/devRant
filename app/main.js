@@ -91,8 +91,6 @@ app.on('ready', () => {
         // MacOS Button Offset & Navbar Padding
         if (process.platform == 'darwin') {
             app_page.insertCSS('.rant-top-bar { padding-top: 24px!important; -webkit-app-region: drag!important; } .rantlist-bg { margin-top: 24px!important; } .profile-details { margin-top: 74px!important; } .profile-tabs { margin-bottom: -24px!important; }');
-        } else {
-            app_page.insertCSS('.addrant-btn, .addcomment-btn { bottom: 20px!important; }');
         }
 
         //Extenal Links Open in New Window
