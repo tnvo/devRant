@@ -70,14 +70,13 @@ var template_win = [{
         click: function(item, focusedWindow) {
             if (focusedWindow) focusedWindow.webContents.reload();
         }
-    },{
+    }, {
         label: 'Toggle Theme',
         accelerator: 'Control+D',
         click() {
             // Some code goes here.
         }
-    }
-  ]
+    }]
 }, {
     label: 'Window',
     role: 'window',
@@ -186,8 +185,7 @@ var template_osx = [{
             click() {
                 // Some code goes here.
             }
-        }
-    ]
+        }]
 }, {
     label: 'Window',
     role: 'window',

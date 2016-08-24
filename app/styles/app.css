@@ -1,21 +1,21 @@
 .rant-top-bar {
-  background-color: #40415a!important;
+    background-color: #40415a!important;
 }
 .mobile-install-banner {
-  display:none!important;
+    display: none!important;
 }
 .bar-btm-guy {
-   display:none!important;
+    display: none!important;
 }
 ::-webkit-scrollbar {
-   display: none!important;
+    display: none!important;
 }
 div.body-col2.profile-page > .rant-top-bar a {
-  float: right!important;
-  text-align: right!important;
-  margin-right: 20px!important;
-  height: 44px!important;
-  font-size: 30px!important;
-  margin-left: 10px!important;
-  display: inline-block!important;
+    float: right!important;
+    text-align: right!important;
+    margin-right: 20px!important;
+    height: 44px!important;
+    font-size: 30px!important;
+    margin-left: 10px!important;
+    display: inline-block!important;
 }

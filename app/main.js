@@ -141,5 +141,5 @@ app.on('activate', () => {
     mainWindow.show()
 })
 app.on('before-quit', () => {
-	isQuitting = true;
+    isQuitting = true;
 });

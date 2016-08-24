@@ -1,28 +1,28 @@
 {
-  "name": "devRant",
-  "productName": "devRant",
-  "version": "1.0.4",
-  "description": "The unofficial electron app for devRant",
-  "private": true,
-  "main": "main.js",
-  "author": "[MEADOW_DEV] <bendixon50@gmail.com> (http://twitter.com/Meadowcottage13)",
-  "license": "GNU General Public License",
-  "homepage": "https://github.com/meadowcottage/devrant/",
-  "keywords": [
-    "electron",
-    "devRant"
-  ],
-  "bugs": {
-    "url": "https://github.com/meadowcottage/devrant/issues/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/meadowcottage/devrant.git"
-  },
-  "dependencies": {
-    "electron-config": "^0.2.1",
-    "electron-context-menu": "^0.4.0",
-    "electron-dl": "^1.3.0",
-    "electron-is-dev": "^0.1.2"
-  }
+    "name": "devRant",
+    "productName": "devRant",
+    "version": "1.0.4",
+    "description": "The unofficial electron app for devRant",
+    "private": true,
+    "main": "main.js",
+    "author": "[MEADOW_DEV] <bendixon50@gmail.com> (http://twitter.com/Meadowcottage13)",
+    "license": "GNU General Public License",
+    "homepage": "https://github.com/meadowcottage/devrant/",
+    "keywords": [
+        "electron",
+        "devRant"
+    ],
+    "bugs": {
+        "url": "https://github.com/meadowcottage/devrant/issues/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/meadowcottage/devrant.git"
+    },
+    "dependencies": {
+        "electron-config": "^0.2.1",
+        "electron-context-menu": "^0.4.0",
+        "electron-dl": "^1.3.0",
+        "electron-is-dev": "^0.1.2"
+    }
 }
