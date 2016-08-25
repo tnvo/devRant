@@ -29,7 +29,8 @@ div.username-row > a.username-details,
 .tabs,
 .profile-detail-col2 > a,
 .search-popular,
-.notif-body {
+.notif-body,
+div.rantlist-content-col > div.rantlist-title > a {
     color: #E0E0E0!important;
 }
 .rantlist-tags a {
