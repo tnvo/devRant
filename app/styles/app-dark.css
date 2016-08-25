@@ -12,9 +12,7 @@ body,
 .reply-bar {
     background-color: #545571!important;
 }
-.rantlist-vote-col.vote-state-novote .btn-vote-circle,
-.plusone,
-.minusone {
+.rantlist-vote-col.vote-state-novote .btn-vote-circle {
     background-color: #aaaab8!important;
 }
 .rantlist li,
