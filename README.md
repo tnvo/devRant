@@ -21,7 +21,7 @@
 
 ## Install
 
-[Download the lastest version](https://github.com/Meadowcottage/Devrant/releases) or install on OS X via [homebrew](http://brew.sh) using `brew cask install devrant`.
+[https://img.shields.io/badge/DOWNLOADS--brightgreen.svg?style=social](https://github.com/Meadowcottage/Devrant/releases) or install on OS X via [homebrew](http://brew.sh) using `brew cask install devrant`.
 
 ## Development
 
