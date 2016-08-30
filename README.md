@@ -34,7 +34,7 @@
 
 [<img width='45' height="45" align='left' alt='devRant' src="https://raw.githubusercontent.com/Meadowcottage/devRant/master/build/icon-512.png">](https://www.devrant.io/) Most of the support for this app must go to the devRant team and the work they put in to make the platform itself and continue to make it great for us developers. To support [Devrant](https://www.devrant.io/), who built the platform, feel free to check out their site for more details.
 
-[<img width='45' height="45" align='left' alt='Github' src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">](https://github.com/Meadowcottage/Devrant) Feel free to help support this unofficial app by submitting issues or bugs so we can resolve and fox them or even feel free to submit pull requests if you have already helped develop a fix for one of the bugs in the app.
+[<img width='45' height="45" align='left' alt='Github' src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">](https://github.com/Meadowcottage/Devrant) Feel free to help support this unofficial app by submitting issues or bugs so we can resolve and fix them or even feel free to submit pull requests if you have already helped develop a fix for one of the bugs in the app.
 
 ## LICENSE:
 
