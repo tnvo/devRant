@@ -23,3 +23,9 @@ div.body-col2.profile-page > .rant-top-bar a {
 .addcomment-btn {
   bottom: 20px!important;
 }
+@media screen and (max-width: 640px) {
+  .filter-top-bar {
+		margin-top: 74px!important;
+		margin-bottom: -24px!important;
+	}
+}
