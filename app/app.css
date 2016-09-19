@@ -28,4 +28,8 @@ div.body-col2.profile-page > .rant-top-bar a {
 		margin-top: 74px!important;
 		margin-bottom: -24px!important;
 	}
+  .profile-avatar-container {
+    margin-top: 74px!important;
+    margin-bottom: -74px!important;
+  }
 }
