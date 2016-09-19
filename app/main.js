@@ -93,17 +93,8 @@ app.on('ready', () => {
             app_page.insertCSS('.rant-top-bar { padding-top: 24px!important; -webkit-app-region: drag!important; } .rantlist-bg { margin-top: 24px!important; } .profile-details { margin-top: 74px!important; } .profile-tabs { margin-bottom: -24px!important; }');
         }
 
-        //Extenal Links Open in New Window
-        app_page.executeJavaScript("$('a').not('[href*=\"mailto:\"]').each(function (){var isInternalLink = new RegExp('/' + window.location.host + '/');if ( ! isInternalLink.test(this.href) ) {$(this).attr('target', '_blank');}});");
-
-        // Adds Download Button to Menu
-        app_page.executeJavaScript("$('<li><a target=\"_blank\" href=\"https://www.devrant.io/\"><span class=\"icon-about2 icon\"></span>Downloads</a></li>').insertAfter('div.menu-modal > ul > li:nth-child(5)')");
-
-        // Adds Feedback Button to Menu
-        app_page.executeJavaScript("$('<li><a target=\"_blank\" href=\"mailto:info@devrant.io\"><span class=\"icon-feedback2 icon\"></span>Feedback</a></li>').insertAfter('div.menu-modal > ul > li:nth-child(5)')");
-
-        //Adds Back Button
-        app_page.executeJavaScript("$('.feed-top-icons:nth-child(2), .rant-top-bar > .share-icons, div.body-col2.profile-page > .rant-top-bar').prepend('<a href=\"javascript: history.back();\" title=\"Back\" alt=\"Back\"><span class=\"icon-back2 icon\"></span></a>')");
+        // Stock code additions
+        app_page.executeJavaScript(fs.readFileSync(path.join(__dirname, 'app.js'), 'utf8'));
 
         mainWindow.show();
 
