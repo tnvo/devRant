@@ -11,7 +11,9 @@
 
 # Screenshots
 
-[<img alt='devRant' src="https://raw.githubusercontent.com/Meadowcottage/devRant/master/build/Screenshot.png">](https://github.com/Meadowcottage/devRant/releases)
+[<img alt='devRant' src="https://raw.githubusercontent.com/Meadowcottage/devRant/master/build/Screenshot-1.png">](https://github.com/Meadowcottage/devRant/releases)
+
+[<img alt='devRant' src="https://raw.githubusercontent.com/Meadowcottage/devRant/master/build/Screenshot-2.png">](https://github.com/Meadowcottage/devRant/releases)
 
 ## Downloads
 > Downloads can be found on the [releases page](https://github.com/Meadowcottage/devRant/releases) or install on OS X via [homebrew](http://brew.sh) using `brew cask install devrant`.
