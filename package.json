@@ -10,7 +10,7 @@
         "dist": "npm run compile && build"
     },
     "build": {
-        "appId": "uk.meadowcottage.devRant",
+        "appId": "xyz.meadowcottage.devRant",
         "category": "public.app-category.social",
         "productName": "devRant",
         "dmg": {
