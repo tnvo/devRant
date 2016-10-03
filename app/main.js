@@ -83,10 +83,10 @@ app.on('ready', () => {
     app_page.on('dom-ready', () => {
 
         // Stock style additions
-        app_page.insertCSS(fs.readFileSync(path.join(__dirname, 'app.css'), 'utf8'));
+        app_page.insertCSS(fs.readFileSync(path.join(__dirname, 'styles/app.css'), 'utf8'));
 
         // Dark theme
-        //app_page.insertCSS(fs.readFileSync(path.join(__dirname, 'app-dark.css'), 'utf8'));
+        //app_page.insertCSS(fs.readFileSync(path.join(__dirname, 'styles/app-dark.css'), 'utf8'));
 
         // MacOS Button Offset & Navbar Padding
         if (process.platform == 'darwin') {
