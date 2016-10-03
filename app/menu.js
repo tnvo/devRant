@@ -13,10 +13,6 @@ var template_win = [{
         accelerator: 'Control+H',
         role: 'hide'
     }, {
-        label: 'Hide Others',
-        accelerator: 'Control+Shift+H',
-        role: 'hideothers'
-    }, {
         type: 'separator'
     }, {
         label: 'Quit',
@@ -98,6 +94,11 @@ var template_win = [{
             require('electron').shell.openExternal("https://github.com/Meadowcottage/devRant/releases/tag/" + app_version)
         }
     }, {
+        label: 'Version ' + app_version,
+        enabled: false
+    }, {
+        type: 'separator'
+    }, {
         label: 'View ' + app_name,
         click: function() {
             require('electron').shell.openExternal("https://devrant.io")
@@ -118,10 +119,6 @@ var template_osx = [{
         label: 'Hide ' + app_name,
         accelerator: 'Command+H',
         role: 'hide'
-    }, {
-        label: 'Hide Others',
-        accelerator: 'Command+Shift+H',
-        role: 'hideothers'
     }, {
         type: 'separator'
     }, {
@@ -206,6 +203,11 @@ var template_osx = [{
         click: function() {
             require('electron').shell.openExternal("https://github.com/Meadowcottage/devRant/releases/tag/" + app_version)
         }
+    }, {
+        label: 'Version ' + app_version,
+        enabled: false
+    }, {
+        type: 'separator'
     }, {
         label: 'View ' + app_name,
         click: function() {

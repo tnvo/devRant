@@ -5,7 +5,7 @@
  - [x] MacOS build to use Electron `titleBarStyle: "hidden"`
  - [x] Add dark theme option to settings in menu.
  - [x] Add feedback button to menu.
- - [ ] Add app info to bottom of menu screen.
+ - [x] Add app version to menu.
  - [ ] Add auto-updater system. [electron-updater](https://www.npmjs.com/package/electron-updater) & [electron-gh-releases](https://www.npmjs.com/package/electron-gh-releases)
  - [x] Add context menu shortcuts (EG: Right click to copy link to rant or save image/gif) [electron-context-menu](https://www.npmjs.com/package/electron-context-menu).
  - [x] Add Simplified downloads [electron-dl](https://www.npmjs.com/package/electron-dl).
