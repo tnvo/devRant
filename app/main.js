@@ -41,8 +41,6 @@ function createMainWindow() {
         width: lastWindowState.width,
         height: lastWindowState.height,
         movable: true,
-        width: 450,
-        height: 912,
         minWidth: 450,
         minHeight: 500,
         maxWidth: 640,
