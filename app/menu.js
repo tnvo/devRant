@@ -72,6 +72,14 @@ var template_win = [{
         click() {
             // Some code goes here.
         }
+    }, {
+        type: 'separator'
+    }, {
+        label: 'Toggle Dev Tools',
+        accelerator: 'F12',
+        click(item, focusedWindow) {
+            if (focusedWindow) focusedWindow.webContents.toggleDevTools()
+        }
     }]
 }, {
     label: 'Window',
@@ -181,6 +189,14 @@ var template_osx = [{
             accelerator: 'Command+D',
             click() {
                 // Some code goes here.
+            }
+        }, {
+            type: 'separator'
+        }, {
+            label: 'Toggle Dev Tools',
+            accelerator: 'Command+Shift+I',
+            click(item, focusedWindow) {
+                if (focusedWindow) focusedWindow.webContents.toggleDevTools()
             }
         }]
 }, {
