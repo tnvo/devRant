@@ -1,7 +1,7 @@
 <img src="https://raw.githubusercontent.com/Meadowcottage/devRant/master/build/icon-512.png" align="left" width="192px" height="192px"/>
 <img align="left" width="0" height="192px" hspace="10"/>
 
-# devRant Desktop
+# devRant Desktop [NO LONGER MAINTAINED]
 > This is the unofficial [devRant](https://devrant.io) web app. Built using the [Electron](http://electron.atom.io) framework to take the current live feed site and give it to you as a desktop app.
 
 [![Travis](https://img.shields.io/travis/Meadowcottage/devRant/master.svg?style=flat-square)](https://travis-ci.org/Meadowcottage/devRant) [![Appveyor](https://img.shields.io/appveyor/ci/meadowcottage/devrant.svg?style=flat-square)](https://ci.appveyor.com/project/Meadowcottage/devrant) [![Release](https://img.shields.io/github/release/Meadowcottage/devRant.svg?style=flat-square)](https://github.com/Meadowcottage/devRant/releases) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg?style=flat-square)](https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=bendixon50%40gmail%2ecom&item_name=Tip%20for%20Meadowcottage&currency_code=GBP) [![Downloads](https://img.shields.io/github/downloads/meadowcottage/devrant/total.svg?style=flat-square)](https://github.com/Meadowcottage/devRant/releases) [![License](https://img.shields.io/badge/License-GPL%20v3-blue.svg?style=flat-square)](http://www.gnu.org/licenses/)
